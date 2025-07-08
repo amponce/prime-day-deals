@@ -1,5 +1,5 @@
 {
-    "name": "prime-day-tv-deals-2025",
+    "name": "prime-day-deals",
     "version": "1.0.0",
     "description": "Expert comparison guide for Prime Day TV deals with technology breakdown",
     "main": "index.html",
@@ -22,7 +22,7 @@
     "license": "MIT",
     "repository": {
       "type": "git",
-      "url": "https://github.com/yourusername/prime-day-tv-deals.git"
+      "url": "https://github.com/amponce/prime-day-deals.git"
     },
-    "homepage": "https://prime-day-tv-deals.pages.dev"
+    "homepage": "https://prime-day-deals.pages.dev"
   }
