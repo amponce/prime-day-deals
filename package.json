@@ -7,9 +7,15 @@
         "dev": "next dev",
         "build": "npm run build:static",
         "build:static": "rm -rf dist && mkdir -p dist && cp *.html dist/",
-        "build:next": "next build",
+        "build:next": "next build && mv out dist",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "deploy": "npm run build:next",
+        "fetch-deals": "tsx scripts/fetch-deals.ts",
+        "fetch-deals:fresh": "tsx scripts/fetch-deals.ts --fresh",
+        "update-deals": "tsx scripts/manual-update.ts",
+        "quick-deals": "tsx scripts/quick-deals.ts",
+        "scraper": "tsx scripts/simple-scraper.ts"
     },
     "keywords": [
         "prime-day",
@@ -32,6 +38,7 @@
         "url": "https://github.com/amponce/prime-day-deals/issues"
     },
     "dependencies": {
+        "@tailwindcss/postcss": "^4.1.11",
         "@types/node": "^24.0.12",
         "@types/react": "^19.1.8",
         "@types/react-dom": "^19.1.6",
@@ -40,7 +47,12 @@
         "postcss": "^8.5.6",
         "react": "^19.1.0",
         "react-dom": "^19.1.0",
-        "tailwindcss": "^4.1.11",
+        "tailwindcss": "^3.4.17",
         "typescript": "^5.8.3"
+    },
+    "devDependencies": {
+        "@types/cheerio": "^0.22.35",
+        "cheerio": "^1.1.0",
+        "tsx": "^4.20.3"
     }
 }
