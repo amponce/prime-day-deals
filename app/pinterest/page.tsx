@@ -2,150 +2,177 @@ import { tvDeals } from '@/lib/data';
 import PinterestCard from '@/components/PinterestCard';
 
 export const metadata = {
-  title: 'Pinterest Gallery | Pin Your Favorite TV Deals',
-  description: 'Browse our Pinterest-optimized gallery of TV deals. Save your favorites to Pinterest!',
+  title: 'Living Room Inspiration | Modern TV Setup Ideas',
+  description: 'Beautiful living room designs featuring the latest TV technology. Get inspired for your home entertainment space.',
 };
 
 export default function PinterestPage() {
-  // Featured Canvas TV
-  const canvasTV = {
-    id: 'B0F363GQZF',
-    name: 'Hisense 75" CanvasTV',
-    size: 75,
-    technology: 'QLED',
-    currentPrice: 1999.99,
-    originalPrice: 2999.99,
-    discount: 33,
-    imageUrl: 'https://m.media-amazon.com/images/S/aplus-media-library-service-media/d9fb3504-0ff9-4f8b-a7a3-9f7c540f9cf6.__CR0,0,1464,600_PT0_SX1464_V1___.jpg',
-  };
+  // Room inspiration ideas with TV integration
+  const roomInspirations = [
+    {
+      id: 'modern-minimalist',
+      title: 'Minimalist Living Room with Wall-Mounted TV',
+      subtitle: 'Clean lines • Hidden cables • Floating console',
+      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80',
+      type: 'room' as const,
+      pinDescription: 'Minimalist living room design featuring a wall-mounted TV with floating console. Perfect for modern apartments.',
+    },
+    {
+      id: 'cozy-fireplace',
+      title: 'Cozy Movie Night Setup',
+      subtitle: 'Warm lighting • Plush seating • Perfect viewing angle',
+      image: 'https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=800&q=80',
+      type: 'room' as const,
+      pinDescription: 'Create the perfect movie night atmosphere with warm lighting and comfortable seating arrangement.',
+    },
+    {
+      id: 'industrial-loft',
+      title: 'Industrial Loft Entertainment Wall',
+      subtitle: 'Exposed brick • Metal accents • Gallery wall',
+      image: 'https://images.unsplash.com/photo-1536437075651-01d675529a6b?w=800&q=80',
+      type: 'room' as const,
+      pinDescription: 'Industrial style living room with exposed brick and a sleek entertainment setup. Urban loft inspiration.',
+    },
+    {
+      id: 'small-space',
+      title: 'Small Space TV Solutions',
+      subtitle: '15 ideas for apartments & tiny homes',
+      type: 'guide' as const,
+      image: 'small-space',
+      pinDescription: 'Smart TV placement ideas for small apartments and tiny homes. Maximize your space!',
+    },
+    {
+      id: 'scandinavian',
+      title: 'Scandinavian TV Corner',
+      subtitle: 'Light wood • White walls • Natural light',
+      image: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?w=800&q=80',
+      type: 'room' as const,
+      pinDescription: 'Bright Scandinavian living room with natural wood TV stand and plenty of natural light.',
+    },
+    {
+      id: 'cable-management',
+      title: 'Hide Those Cables!',
+      subtitle: 'DIY cable management hacks',
+      type: 'guide' as const,
+      image: 'cable-management',
+      pinDescription: 'Easy DIY cable management solutions to keep your TV area clean and organized.',
+    },
+    {
+      id: 'boho-chic',
+      title: 'Boho Living Room with Art TV',
+      subtitle: 'Plants • Textures • Art when off',
+      image: 'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800&q=80',
+      type: 'room' as const,
+      pinDescription: 'Bohemian style living room featuring a TV that doubles as artwork when not in use.',
+    },
+    {
+      id: 'modern-farmhouse',
+      title: 'Modern Farmhouse TV Setup',
+      subtitle: 'Shiplap • Barn doors • Rustic charm',
+      image: 'https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800&q=80',
+      type: 'room' as const,
+      pinDescription: 'Modern farmhouse living room with sliding barn doors to hide the TV. Cozy and functional!',
+    },
+    {
+      id: 'lighting-guide',
+      title: 'TV Room Lighting Guide',
+      subtitle: 'Reduce glare • Set the mood',
+      type: 'guide' as const,
+      image: 'lighting-guide',
+      pinDescription: 'Complete guide to lighting your TV room - reduce glare and create the perfect ambiance.',
+    },
+  ];
+
+  // Select diverse TV deals - avoid showing multiple similar models
+  const selectedTVDeals = [
+    tvDeals.find(tv => tv.technology === 'OLED' && tv.size >= 65),
+    tvDeals.find(tv => tv.technology === 'QLED' && tv.currentPrice < 500),
+    tvDeals.find(tv => tv.brand === 'Samsung' && tv.name.includes('Frame')),
+    tvDeals.find(tv => tv.size >= 75),
+    tvDeals.find(tv => tv.currentPrice < 300),
+    tvDeals.find(tv => tv.technology === 'Mini-LED'),
+  ].filter(Boolean).slice(0, 6);
+
+  // Create Pinterest-style content mix
+  const pinterestContent: Array<{
+    id: string;
+    title: string;
+    subtitle: string;
+    type: 'deal' | 'room' | 'guide' | 'featured';
+    image: string;
+    pinDescription: string;
+    price?: number;
+    originalPrice?: number;
+  }> = [];
+  
+  // Interweave room inspirations, guides, and TV deals for natural flow
+  roomInspirations.forEach((item, index) => {
+    pinterestContent.push(item);
+    
+    // Add a TV deal after every 2-3 room items
+    if (index % 3 === 1 && selectedTVDeals[Math.floor(index / 3)]) {
+      const tv = selectedTVDeals[Math.floor(index / 3)];
+      if (tv) {
+        pinterestContent.push({
+          id: tv.id,
+          title: `${getRoomStyle(index)} with ${tv.size}" ${tv.technology}`,
+          subtitle: `Shop the look • ${tv.discount}% off today`,
+          price: tv.currentPrice,
+          originalPrice: tv.originalPrice,
+          image: tv.imageUrl || '',
+          type: 'featured' as const,
+          pinDescription: `${getRoomStyle(index)} design featuring ${tv.name}. Create this entertainment setup for less!`,
+        });
+      }
+    }
+  });
 
   return (
-    <div className="py-8 bg-white dark:bg-dark-bg">
+    <div className="py-8 bg-gray-50 dark:bg-dark-bg min-h-screen">
       <div className="container-custom">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4 text-text-dark dark:text-white">📌 Pinterest Gallery</h1>
-          <p className="text-xl text-text-gray dark:text-dark-text-secondary max-w-3xl mx-auto">
-            Pin these TV deals and guides to your boards. Perfect for home decor and tech shopping inspiration!
+        {/* Subtle header - Pinterest style */}
+        <div className="text-center mb-8">
+          <h1 className="text-2xl font-medium mb-2 text-gray-900 dark:text-white">TV Room Ideas & Inspiration</h1>
+          <p className="text-gray-600 dark:text-gray-400">
+            Living room designs, setup guides, and current deals
           </p>
         </div>
         
-        {/* Pinterest Style Masonry Grid */}
-        <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
-          {/* Featured Canvas TV */}
-          <PinterestCard
-            key={canvasTV.id}
-            type="featured"
-            title={`${canvasTV.name} - Art Mode TV`}
-            subtitle={`Transform your space • $${canvasTV.currentPrice}`}
-            price={canvasTV.currentPrice}
-            originalPrice={canvasTV.originalPrice}
-            image={canvasTV.imageUrl}
-            pinDescription={`Hisense 75" CanvasTV with Art Mode - Save ${canvasTV.discount}% at $${canvasTV.currentPrice}! Perfect for modern living rooms.`}
-          />
-          
-          {/* TV Deals */}
-          {tvDeals.slice(0, 3).map((tv) => (
+        {/* Pinterest Masonry Grid */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
+          {pinterestContent.map((item) => (
             <PinterestCard
-              key={tv.id}
-              type="deal"
-              title={tv.name}
-              subtitle={`${tv.size}" ${tv.technology} • Save ${tv.discount}%`}
-              price={tv.currentPrice}
-              originalPrice={tv.originalPrice}
-              image={tv.imageUrl || 'tv'}
-              pinDescription={`${tv.name} ${tv.size}" TV deal - Save ${tv.discount}% at $${tv.currentPrice}!`}
-            />
-          ))}
-          
-          {/* Technology Guide Cards */}
-          <PinterestCard
-            type="guide"
-            title="OLED vs QLED vs Mini-LED"
-            subtitle="Complete TV Technology Guide"
-            image="guide"
-            pinDescription="TV Buying Guide: Compare OLED, QLED, and Mini-LED technologies"
-          />
-          
-          {tvDeals.slice(4, 8).map((tv) => (
-            <PinterestCard
-              key={tv.id}
-              type="deal"
-              title={tv.name}
-              subtitle={`${tv.size}" ${tv.technology} • Save ${tv.discount}%`}
-              price={tv.currentPrice}
-              originalPrice={tv.originalPrice}
-              image={tv.imageUrl || 'tv'}
-              pinDescription={`${tv.name} ${tv.size}" TV deal - Save ${tv.discount}% at $${tv.currentPrice}!`}
-            />
-          ))}
-          
-          {/* Size Guide Card */}
-          <PinterestCard
-            type="guide"
-            title="TV Size Guide"
-            subtitle="Find the perfect size for your room"
-            image="size-guide"
-            pinDescription="TV Size Guide: How to choose the right TV size for any room"
-          />
-          
-          {/* Budget Guide Card */}
-          <PinterestCard
-            type="guide"
-            title="Best TVs by Budget"
-            subtitle="Find the perfect TV for your price range"
-            image="budget-guide"
-            pinDescription="TV Budget Guide: Best TVs under $500, $1000, and $1500"
-          />
-          
-          {tvDeals.slice(8).map((tv) => (
-            <PinterestCard
-              key={tv.id}
-              type="deal"
-              title={tv.name}
-              subtitle={`${tv.size}" ${tv.technology} • Save ${tv.discount}%`}
-              price={tv.currentPrice}
-              originalPrice={tv.originalPrice}
-              image={tv.imageUrl || 'tv'}
-              pinDescription={`${tv.name} ${tv.size}" TV deal - Save ${tv.discount}% at $${tv.currentPrice}!`}
+              key={item.id}
+              type={item.type}
+              title={item.title}
+              subtitle={item.subtitle}
+              price={item.price}
+              originalPrice={item.originalPrice}
+              image={item.image}
+              pinDescription={item.pinDescription}
             />
           ))}
         </div>
         
-        {/* Pinterest Tips */}
-        <div className="mt-16 bg-white dark:bg-dark-surface rounded-2xl shadow-lg p-8">
-          <h2 className="text-2xl font-bold mb-6 text-center text-text-dark dark:text-white">Pin to These Board Ideas</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-bold text-lg mb-4">📺 TV Shopping Boards</h3>
-              <ul className="space-y-2 text-text-gray dark:text-dark-text-secondary">
-                <li>• Prime Day TV Deals</li>
-                <li>• Modern Living Room TVs</li>
-                <li>• Art Mode TVs</li>
-                <li>• Gaming Setup Ideas</li>
-                <li>• Home Theater Inspiration</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">💡 Tech Guide Boards</h3>
-              <ul className="space-y-2 text-text-gray dark:text-dark-text-secondary">
-                <li>• TV Technology Guides</li>
-                <li>• Living Room Design</li>
-                <li>• Minimalist Tech</li>
-                <li>• Smart Home Ideas</li>
-                <li>• Budget Home Theater</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="mt-8 p-6 bg-bg-light dark:bg-dark-surface-2 rounded-xl">
-            <h4 className="font-bold mb-3 text-text-dark dark:text-white">💡 Pin Like a Pro</h4>
-            <p className="text-text-gray dark:text-dark-text-secondary">
-              Each card is optimized for Pinterest with real prices and discount info. 
-              Pin to boards like "Living Room Ideas", "Tech Deals", or "Modern Home Decor" for best engagement!
-            </p>
-          </div>
+        {/* Bottom CTA - Very subtle */}
+        <div className="mt-16 text-center">
+          <p className="text-gray-500 dark:text-gray-400 text-sm">
+            Pin your favorites • More ideas added weekly
+          </p>
         </div>
       </div>
     </div>
   );
+}
+
+function getRoomStyle(index: number): string {
+  const styles = [
+    'Modern entertainment center',
+    'Cozy family room setup',
+    'Minimalist TV wall',
+    'Small space solution',
+    'Home theater design',
+    'Open concept living',
+  ];
+  return styles[index % styles.length];
 }

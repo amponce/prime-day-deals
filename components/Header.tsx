@@ -57,6 +57,9 @@ export default function Header() {
             <Link href="/guide" className="block py-2 hover:text-primary transition-colors">
               Buying Guide
             </Link>
+            <Link href="/blog" className="block py-2 hover:text-primary transition-colors">
+              Setup Guides
+            </Link>
             <Link href="/pinterest" className="block py-2 hover:text-primary transition-colors">
               Pinterest Gallery
             </Link>

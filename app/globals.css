@@ -88,4 +88,6 @@
   .dark::-webkit-scrollbar-thumb:hover {
     @apply bg-dark-border;
   }
+  
+  /* Blog content styles - removed since we handle in component */
 }
