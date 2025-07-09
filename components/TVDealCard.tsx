@@ -3,12 +3,16 @@
 import { TV } from '@/types';
 import { useState } from 'react';
 import TVImagePlaceholder from './TVImagePlaceholder';
+import SwipeableCard from './SwipeableCard';
 
 interface TVDealCardProps {
   tv: TV;
+  onSwipeLeft?: () => void;
+  onSwipeRight?: () => void;
+  enableSwipe?: boolean;
 }
 
-export default function TVDealCard({ tv }: TVDealCardProps) {
+export default function TVDealCard({ tv, onSwipeLeft, onSwipeRight, enableSwipe = false }: TVDealCardProps) {
   const [isPinHovered, setIsPinHovered] = useState(false);
 
   const getTechColor = (tech: string) => {
@@ -30,8 +34,8 @@ export default function TVDealCard({ tv }: TVDealCardProps) {
     window.open(`https://pinterest.com/pin/create/button/?url=${url}&description=${desc}`, '_blank');
   };
 
-  return (
-    <div className="pin-card group" onMouseEnter={() => setIsPinHovered(true)} onMouseLeave={() => setIsPinHovered(false)}>
+  const cardContent = (
+    <div className="pin-card group h-full" onMouseEnter={() => setIsPinHovered(true)} onMouseLeave={() => setIsPinHovered(false)}>
       {/* Pin Button */}
       <button
         onClick={handlePin}
@@ -47,7 +51,7 @@ export default function TVDealCard({ tv }: TVDealCardProps) {
       
       {/* TV Image */}
       {tv.imageUrl ? (
-        <div className="h-64 bg-gray-100">
+        <div className="h-64 bg-gray-100 dark:bg-dark-surface-2">
           <img 
             src={tv.imageUrl} 
             alt={`${tv.name} ${tv.size} inch ${tv.technology} TV`}
@@ -69,16 +73,16 @@ export default function TVDealCard({ tv }: TVDealCardProps) {
         
         {/* Price */}
         <div className="mb-4">
-          <div className="text-3xl font-bold text-primary">${tv.currentPrice}</div>
-          <div className="text-gray-500 line-through">${tv.originalPrice}</div>
-          <div className="text-green-600 font-semibold">Save ${tv.originalPrice - tv.currentPrice}</div>
+          <div className="text-3xl font-bold text-primary dark:text-red-500">${tv.currentPrice}</div>
+          <div className="text-gray-500 dark:text-dark-text-secondary line-through">${tv.originalPrice}</div>
+          <div className="text-green-600 dark:text-green-500 font-semibold">Save ${tv.originalPrice - tv.currentPrice}</div>
         </div>
         
         {/* Features */}
         <div className="mb-4">
           <div className="flex flex-wrap gap-2">
             {tv.features.slice(0, 3).map((feature, index) => (
-              <span key={index} className="text-xs bg-gray-100 px-2 py-1 rounded">
+              <span key={index} className="text-xs bg-gray-100 dark:bg-dark-surface-2 px-2 py-1 rounded">
                 {feature}
               </span>
             ))}
@@ -86,10 +90,10 @@ export default function TVDealCard({ tv }: TVDealCardProps) {
         </div>
         
         {/* Highlights */}
-        <ul className="text-sm text-gray-600 mb-6 space-y-1">
+        <ul className="text-sm text-gray-600 dark:text-dark-text-secondary mb-6 space-y-1">
           {tv.highlights.slice(0, 3).map((highlight, index) => (
             <li key={index} className="flex items-start">
-              <span className="text-green-500 mr-2">✓</span>
+              <span className="text-green-500 dark:text-green-400 mr-2">✓</span>
               {highlight}
             </li>
           ))}
@@ -107,4 +111,14 @@ export default function TVDealCard({ tv }: TVDealCardProps) {
       </div>
     </div>
   );
+
+  if (enableSwipe) {
+    return (
+      <SwipeableCard onSwipeLeft={onSwipeLeft} onSwipeRight={onSwipeRight}>
+        {cardContent}
+      </SwipeableCard>
+    );
+  }
+
+  return cardContent;
 }

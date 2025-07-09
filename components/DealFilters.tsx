@@ -11,7 +11,7 @@ export default function DealFilters() {
   const sizes = ['43"', '48"', '50"', '55"', '65"', '75"', '77"', '85"', '98"'];
 
   return (
-    <div className="bg-white rounded-xl shadow-md p-6">
+    <div className="bg-white dark:bg-dark-surface rounded-xl shadow-md dark:shadow-none dark:border dark:border-dark-border p-6">
       <h3 className="text-xl font-bold mb-6">Filter Deals</h3>
       
       {/* Price Range */}
@@ -74,7 +74,7 @@ export default function DealFilters() {
               className={`py-1 px-2 text-sm rounded border transition-colors ${
                 selectedSizes.includes(size)
                   ? 'bg-primary text-white border-primary'
-                  : 'bg-white text-gray-700 border-gray-300 hover:border-primary'
+                  : 'bg-white dark:bg-dark-surface-2 text-gray-700 dark:text-dark-text border-gray-300 dark:border-dark-border hover:border-primary dark:hover:border-red-500'
               }`}
             >
               {size}
@@ -90,7 +90,7 @@ export default function DealFilters() {
           setSelectedTech([]);
           setSelectedSizes([]);
         }}
-        className="w-full py-2 text-center text-primary font-semibold hover:underline"
+        className="w-full py-2 text-center text-primary dark:text-red-500 font-semibold hover:underline"
       >
         Clear All Filters
       </button>

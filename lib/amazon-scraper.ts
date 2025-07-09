@@ -169,7 +169,7 @@ export async function updateTVDeals(existingDeals: TV[]): Promise<TV[]> {
 }
 
 // Simplified scraper using Amazon search URLs (no API needed)
-export async function getAmazonSearchUrl(category: string = 'tv deals'): string {
+export function getAmazonSearchUrl(category: string = 'tv deals'): string {
   const searchParams = new URLSearchParams({
     k: category,
     i: 'electronics',

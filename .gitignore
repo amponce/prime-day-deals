@@ -58,16 +58,9 @@ Thumbs.db
 logs
 *.log
 
-# Documentation and guide files (not needed for deployment)
-ADD_REAL_REVIEWS.md
-AUTOMATION_GUIDE.md
-CLOUDFLARE_DEPLOYMENT.md
-FIND_REAL_TV_ASINS.md
-GET_REAL_DEALS.md
-GET_TV_IMAGES.md
-REAL_AMAZON_REVIEWS.md
-SETUP_AFFILIATE_LINKS.md
-AMAZON_SHOPPABLE_ROOMS_GUIDE.md
+# Documentation folder (private guides and notes)
+/docs/
+docs/
 
 # Static HTML files (not needed for Next.js app)
 index.html

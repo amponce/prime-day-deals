@@ -7,25 +7,25 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-white dark:bg-dark-surface shadow-md dark:shadow-none dark:border-b dark:border-dark-border sticky top-0 z-40 transition-colors duration-300">
       <nav className="container-custom py-4">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-primary">
+          <Link href="/" className="text-2xl font-bold text-primary dark:text-red-500">
             DealRoom
           </Link>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/deals" className="hover:text-primary transition-colors">
+            <Link href="/deals" className="hover:text-primary dark:hover:text-red-500 transition-colors">
               TV Deals
             </Link>
-            <Link href="/rooms" className="hover:text-primary transition-colors">
+            {/* <Link href="/rooms" className="hover:text-primary transition-colors">
               Room Designs
-            </Link>
-            <Link href="/guide" className="hover:text-primary transition-colors">
+            </Link> */}
+            <Link href="/guide" className="hover:text-primary dark:hover:text-red-500 transition-colors">
               Buying Guide
             </Link>
-            <Link href="/pinterest" className="hover:text-primary transition-colors">
+            <Link href="/pinterest" className="hover:text-primary dark:hover:text-red-500 transition-colors">
               Pinterest Gallery
             </Link>
           </div>
@@ -47,17 +47,17 @@ export default function Header() {
         
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t pt-4">
-            <Link href="/deals" className="block py-2 hover:text-primary transition-colors">
+          <div className="md:hidden mt-4 pb-4 border-t dark:border-dark-border pt-4">
+            <Link href="/deals" className="block py-2 hover:text-primary dark:hover:text-red-500 transition-colors">
               TV Deals
             </Link>
-            <Link href="/rooms" className="block py-2 hover:text-primary transition-colors">
+            {/* <Link href="/rooms" className="block py-2 hover:text-primary transition-colors">
               Room Designs
-            </Link>
-            <Link href="/guide" className="block py-2 hover:text-primary transition-colors">
+            </Link> */}
+            <Link href="/guide" className="block py-2 hover:text-primary dark:hover:text-red-500 transition-colors">
               Buying Guide
             </Link>
-            <Link href="/pinterest" className="block py-2 hover:text-primary transition-colors">
+            <Link href="/pinterest" className="block py-2 hover:text-primary dark:hover:text-red-500 transition-colors">
               Pinterest Gallery
             </Link>
           </div>

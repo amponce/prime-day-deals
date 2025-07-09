@@ -5,17 +5,24 @@
     "main": "index.html",
     "scripts": {
         "dev": "next dev",
-        "build": "npm run build:static",
+        "build": "npm run build:next",
         "build:static": "rm -rf dist && mkdir -p dist && cp *.html dist/",
-        "build:next": "next build && mv out dist",
+        "build:next": "next build",
         "start": "next start",
         "lint": "next lint",
         "deploy": "npm run build:next",
         "fetch-deals": "tsx scripts/fetch-deals.ts",
         "fetch-deals:fresh": "tsx scripts/fetch-deals.ts --fresh",
+        "fetch-deals:free": "tsx scripts/fetch-deals-free.ts",
         "update-deals": "tsx scripts/manual-update.ts",
         "quick-deals": "tsx scripts/quick-deals.ts",
-        "scraper": "tsx scripts/simple-scraper.ts"
+        "scraper": "tsx scripts/simple-scraper.ts",
+        "free-options": "tsx scripts/free-automation.ts",
+        "scrape-amazon": "tsx scripts/scrape-amazon-deals.ts",
+        "download-images": "tsx scripts/download-tv-images.ts",
+        "process-json": "tsx scripts/process-amazon-json.ts",
+        "update-deals": "tsx scripts/update-deals-from-results.ts",
+        "quick-update": "tsx scripts/quick-update.ts"
     },
     "keywords": [
         "prime-day",

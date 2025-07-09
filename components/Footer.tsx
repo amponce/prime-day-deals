@@ -1,12 +1,12 @@
 export default function Footer() {
   return (
-    <footer className="bg-dark text-white py-12 mt-20">
+    <footer className="bg-dark dark:bg-dark-surface text-white py-12 mt-20 transition-colors duration-300">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">DealRoom</h3>
-            <p className="text-gray-400">
-              Your source for the best TV deals and room design inspiration.
+            <p className="text-gray-400 dark:text-dark-text-secondary">
+              Your source for the best TV deals and buying guides.
             </p>
           </div>
           
@@ -14,8 +14,8 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-gray-400">
               <li><a href="/deals" className="hover:text-white transition-colors">TV Deals</a></li>
-              <li><a href="/rooms" className="hover:text-white transition-colors">Room Designs</a></li>
               <li><a href="/guide" className="hover:text-white transition-colors">Buying Guide</a></li>
+              <li><a href="/pinterest" className="hover:text-white transition-colors">Pinterest Gallery</a></li>
             </ul>
           </div>
           

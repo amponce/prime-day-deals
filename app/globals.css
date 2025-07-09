@@ -8,7 +8,17 @@
   }
   
   body {
-    @apply text-gray-900 antialiased;
+    @apply antialiased;
+  }
+  
+  /* Prevent text selection during swipe */
+  .touch-pan-y {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 }
 
@@ -18,19 +28,19 @@
   }
   
   .btn-primary {
-    @apply bg-primary hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 hover:shadow-lg;
+    @apply bg-primary hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 hover:shadow-lg;
   }
   
   .btn-secondary {
-    @apply bg-secondary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 hover:shadow-lg;
+    @apply bg-secondary hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 hover:shadow-lg;
   }
   
   .card {
-    @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300;
+    @apply bg-white dark:bg-dark-surface rounded-2xl shadow-lg hover:shadow-xl dark:shadow-none dark:border dark:border-dark-border transition-all duration-300;
   }
   
   .pin-card {
-    @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden;
+    @apply bg-white dark:bg-dark-surface rounded-2xl shadow-lg hover:shadow-xl dark:shadow-none dark:border dark:border-dark-border transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden;
   }
   
   .tech-badge {
@@ -38,6 +48,24 @@
   }
   
   .deal-badge {
-    @apply absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg;
+    @apply absolute top-4 right-4 bg-primary dark:bg-red-600 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg;
+  }
+  
+  /* Dark mode scrollbar */
+  .dark::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .dark::-webkit-scrollbar-track {
+    @apply bg-dark-surface;
+  }
+  
+  .dark::-webkit-scrollbar-thumb {
+    @apply bg-dark-surface-2 rounded-full;
+  }
+  
+  .dark::-webkit-scrollbar-thumb:hover {
+    @apply bg-dark-border;
   }
 }
