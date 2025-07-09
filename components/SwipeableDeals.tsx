@@ -28,18 +28,19 @@ export default function SwipeableDeals({ deals }: SwipeableDealsProps) {
   };
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full">
       {/* Card Container */}
-      <div className="relative h-[600px] mb-12">
+      <div className="relative min-h-[500px]">
         {deals.map((tv, index) => (
           <div
             key={tv.id}
-            className={`absolute inset-0 transition-all duration-300 ${
+            className={`transition-all duration-300 ${
               index === currentIndex
-                ? 'opacity-100 z-10'
-                : index < currentIndex
-                ? 'opacity-0 -translate-x-full'
-                : 'opacity-0 translate-x-full'
+                ? 'relative opacity-100'
+                : 'absolute inset-0 pointer-events-none ' +
+                  (index < currentIndex
+                    ? 'opacity-0 -translate-x-full'
+                    : 'opacity-0 translate-x-full')
             }`}
           >
             <TVDealCard

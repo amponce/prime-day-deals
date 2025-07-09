@@ -1,14 +1,25 @@
 'use client';
 
-import { useState } from 'react';
+interface DealFiltersProps {
+  priceRange: number[];
+  setPriceRange: (range: number[]) => void;
+  selectedTech: string[];
+  setSelectedTech: (tech: string[]) => void;
+  selectedSizes: number[];
+  setSelectedSizes: (sizes: number[]) => void;
+}
 
-export default function DealFilters() {
-  const [priceRange, setPriceRange] = useState([0, 5000]);
-  const [selectedTech, setSelectedTech] = useState<string[]>([]);
-  const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
+export default function DealFilters({
+  priceRange,
+  setPriceRange,
+  selectedTech,
+  setSelectedTech,
+  selectedSizes,
+  setSelectedSizes
+}: DealFiltersProps) {
 
   const technologies = ['OLED', 'QLED', 'Mini-LED', 'LED', 'QD-OLED'];
-  const sizes = ['43"', '48"', '50"', '55"', '65"', '75"', '77"', '85"', '98"'];
+  const sizes = [40, 43, 48, 50, 55, 65, 70, 75, 77, 85, 98];
 
   return (
     <div className="bg-white dark:bg-dark-surface rounded-xl shadow-md dark:shadow-none dark:border dark:border-dark-border p-6">
@@ -77,7 +88,7 @@ export default function DealFilters() {
                   : 'bg-white dark:bg-dark-surface-2 text-gray-700 dark:text-dark-text border-gray-300 dark:border-dark-border hover:border-primary dark:hover:border-red-500'
               }`}
             >
-              {size}
+              {size}"
             </button>
           ))}
         </div>

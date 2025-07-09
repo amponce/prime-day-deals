@@ -40,15 +40,26 @@
   }
   
   .pin-card {
-    @apply bg-white dark:bg-dark-surface rounded-2xl shadow-lg hover:shadow-xl dark:shadow-none dark:border dark:border-dark-border transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden;
+    @apply bg-white dark:bg-dark-surface rounded-2xl shadow-lg hover:shadow-2xl dark:shadow-none dark:border dark:border-dark-border transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden;
+    @apply border border-gray-100 dark:border-dark-border;
+  }
+  
+  .pin-card:hover {
+    @apply dark:border-dark-border/50;
   }
   
   .tech-badge {
-    @apply inline-block px-3 py-1 rounded-full text-xs font-semibold;
+    @apply inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide;
   }
   
-  .deal-badge {
-    @apply absolute top-4 right-4 bg-primary dark:bg-red-600 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg;
+  /* Smooth animations */
+  .pin-card * {
+    @apply transition-all duration-300;
+  }
+  
+  /* Better focus states */
+  .pin-card:focus-within {
+    @apply ring-2 ring-primary dark:ring-red-500 ring-offset-2 dark:ring-offset-dark-bg;
   }
   
   /* Dark mode scrollbar */
