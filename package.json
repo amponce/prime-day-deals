@@ -4,26 +4,43 @@
     "description": "Expert comparison guide for Prime Day TV deals with technology breakdown",
     "main": "index.html",
     "scripts": {
-      "dev": "python -m http.server 8000",
-      "build": "npm run build:prepare",
-      "build:prepare": "rm -rf dist && mkdir -p dist && cp index.html dist/",
-      "deploy": "echo 'Deploy to Cloudflare Pages via dashboard or wrangler'"
+        "dev": "next dev",
+        "build": "npm run build:static",
+        "build:static": "rm -rf dist && mkdir -p dist && cp *.html dist/",
+        "build:next": "next build",
+        "start": "next start",
+        "lint": "next lint"
     },
     "keywords": [
-      "prime-day",
-      "tv-deals",
-      "oled",
-      "qled",
-      "mini-led",
-      "television",
-      "deals",
-      "comparison"
+        "prime-day",
+        "tv-deals",
+        "oled",
+        "qled",
+        "mini-led",
+        "television",
+        "deals",
+        "comparison"
     ],
     "author": "Your Name",
     "license": "MIT",
     "repository": {
-      "type": "git",
-      "url": "https://github.com/amponce/prime-day-deals.git"
+        "type": "git",
+        "url": "git+https://github.com/amponce/prime-day-deals.git"
     },
-    "homepage": "https://prime-day-deals.pages.dev"
-  }
+    "homepage": "https://prime-day-deals.pages.dev",
+    "bugs": {
+        "url": "https://github.com/amponce/prime-day-deals/issues"
+    },
+    "dependencies": {
+        "@types/node": "^24.0.12",
+        "@types/react": "^19.1.8",
+        "@types/react-dom": "^19.1.6",
+        "autoprefixer": "^10.4.21",
+        "next": "^15.3.5",
+        "postcss": "^8.5.6",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
+        "tailwindcss": "^4.1.11",
+        "typescript": "^5.8.3"
+    }
+}
