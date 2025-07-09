@@ -282,7 +282,7 @@ export default function TVRoomLightingGuide() {
     <BlogPost
       title="Perfect TV Room Lighting Setup"
       subtitle="Create the ultimate viewing experience with proper ambient and bias lighting"
-      heroImage="https://images.unsplash.com/photo-1565195992957-6188c9f58ba2?q=80&w=2000"
+      heroImage="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=2000&q=80"
       heroAlt="Modern TV room with ambient lighting"
       publishDate="July 9, 2025"
       readTime="6 min"

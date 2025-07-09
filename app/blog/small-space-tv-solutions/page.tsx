@@ -177,7 +177,7 @@ export default function SmallSpaceTVSolutions() {
     <BlogPost
       title="Best TV Setups for Small Spaces"
       subtitle="Maximize your living area with these space-saving TV solutions and mounting ideas"
-      heroImage="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2000"
+      heroImage="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=2000&q=80"
       heroAlt="Modern small living room with wall-mounted TV"
       publishDate="July 9, 2025"
       readTime="5 min"
