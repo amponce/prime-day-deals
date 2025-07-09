@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Day TV Deals 2025 📺 LG OLED $599 | Samsung QLED | Save 60%</title>
+    <meta name="description" content="🔥 LIVE: Prime Day TV deals! LG C5 OLED $1,697, Hisense Mini-LED $998, Samsung QD-OLED $2,998. Expert picks & comparison guide. Pin to save!">
+    <meta name="keywords" content="Prime Day TV deals 2025, LG OLED sale, Samsung QLED deals, Hisense Mini-LED, best TV deals, Amazon Prime Day">
+    
+    <!-- Pinterest Rich Pin Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Prime Day TV Deals 2025 | Up to 60% OFF OLED, QLED & Mini-LED">
+    <meta property="og:description" content="🔥 Best Prime Day TV deals LIVE! LG B4 OLED 48\" only $599, Hisense 65\" Mini-LED $998, expert buying guides included.">
+    <meta property="og:url" content="https://prime-day-deals.pages.dev/pinterest-tv-deals.html">
+    <meta property="og:site_name" content="Prime Day TV Deals Expert">
+    <meta property="article:author" content="TV Technology Expert">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=1000&h=1500">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="1500">
+    
+    <!-- Pinterest Specific -->
+    <meta name="pinterest-rich-pin" content="true">
+    <meta property="product:price:amount" content="599">
+    <meta property="product:price:currency" content="USD">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        
+        .deal-timer {
+            background: rgba(0,0,0,0.3);
+            padding: 10px 25px;
+            border-radius: 30px;
+            display: inline-block;
+            margin: 15px 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        
+        /* Pinterest Grid Layout */
+        .pinterest-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            columns: 300px auto;
+            column-gap: 20px;
+        }
+        
+        .pin-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            break-inside: avoid;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .pin-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+        }
+        
+        /* Pinterest Save Button */
+        .pin-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #E60023;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 10;
+            cursor: pointer;
+        }
+        
+        .pin-card:hover .pin-button {
+            opacity: 1;
+        }
+        
+        /* Pin Images */
+        .pin-image {
+            width: 100%;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            min-height: 400px;
+        }
+        
+        .pin-image.hero-deal {
+            background: linear-gradient(135deg, rgba(142, 68, 173, 0.9) 0%, rgba(155, 89, 182, 0.9) 100%), url('https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=600');
+            min-height: 500px;
+        }
+        
+        .pin-image.tech-guide {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.9) 0%, rgba(41, 128, 185, 0.9) 100%);
+            min-height: 600px;
+        }
+        
+        .pin-image.deal {
+            min-height: 450px;
+        }
+        
+        .pin-image.oled {
+            background: linear-gradient(135deg, rgba(142, 68, 173, 0.95) 0%, rgba(108, 92, 231, 0.95) 100%);
+        }
+        
+        .pin-image.qled {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.95) 0%, rgba(41, 128, 185, 0.95) 100%);
+        }
+        
+        .pin-image.miniled {
+            background: linear-gradient(135deg, rgba(230, 126, 34, 0.95) 0%, rgba(211, 84, 0, 0.95) 100%);
+        }
+        
+        .pin-image.budget {
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.95) 0%, rgba(39, 174, 96, 0.95) 100%);
+        }
+        
+        .pin-image.premium {
+            background: linear-gradient(135deg, rgba(231, 76, 60, 0.95) 0%, rgba(192, 57, 43, 0.95) 100%);
+        }
+        
+        .deal-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ff4757;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        
+        .tv-model {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .tv-size {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        
+        .price-display {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin: 20px 0 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .original-price-display {
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+        
+        .rating-stars {
+            font-size: 1.3rem;
+            margin-top: 15px;
+        }
+        
+        /* Content Section */
+        .pin-content {
+            padding: 25px;
+        }
+        
+        .pin-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            line-height: 1.3;
+        }
+        
+        .price-info {
+            margin: 15px 0;
+        }
+        
+        .current-price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #e74c3c;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.3rem;
+            margin-left: 10px;
+        }
+        
+        .savings-badge {
+            background: #27ae60;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 8px;
+        }
+        
+        /* Tech Tags */
+        .tech-tags {
+            margin: 15px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tech-tag {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .tech-tag.oled { background: #8e44ad; }
+        .tech-tag.qled { background: #3498db; }
+        .tech-tag.miniled { background: #e67e22; }
+        .tech-tag.led { background: #95a5a6; }
+        .tech-tag.qd-oled { background: #e74c3c; }
+        
+        /* Features */
+        .features-list {
+            margin: 15px 0;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .feature-item {
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .feature-item:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        /* CTA Button */
+        .shop-button {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 17px;
+            text-align: center;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .shop-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(231, 76, 60, 0.4);
+        }
+        
+        /* Technology Comparison Pin */
+        .tech-comparison-pin {
+            padding: 30px 20px;
+        }
+        
+        .tech-item {
+            margin: 15px 0;
+            padding: 15px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .tech-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .tech-desc {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        /* Quick Stats */
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .stat {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .stat-value {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        /* Affiliate Disclosure */
+        .disclosure {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 14px;
+            color: #856404;
+        }
+        
+        /* Pinterest Float Button */
+        .pinterest-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #E60023;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .pinterest-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(0,0,0,0.4);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .pinterest-grid {
+                columns: 1;
+                padding: 10px;
+            }
+            
+            .pin-image {
+                min-height: 350px;
+            }
+            
+            .tv-model {
+                font-size: 1.8rem;
+            }
+            
+            .price-display {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>🔥 PRIME DAY TV DEALS ARE LIVE!</h1>
+        <div class="deal-timer">⏰ DEALS END SOON - UP TO 60% OFF!</div>
+        <p style="font-size: 1.2rem; margin-top: 10px;">📌 Pin your favorite deals to Pinterest!</p>
+    </div>
+    
+    <!-- Affiliate Disclosure -->
+    <div class="disclosure">
+        <strong>Affiliate Disclosure:</strong> We earn commissions from qualifying purchases. This helps us provide expert reviews at no extra cost to you.
+    </div>
+    
+    <!-- Pinterest Optimized Cards -->
+    <div class="pinterest-grid">
+        
+        <!-- Hero Deal Pin -->
+        <div class="pin-card">
+            <a class="pin-button" onclick="pinThis(event, 'LG B4 OLED 48 inch only $599 - 60% OFF Prime Day Deal!')">📌 Save</a>
+            <div class="pin-image hero-deal">
+                <div class="deal-badge">60% OFF</div>
+                <div class="tv-model">LG B4 OLED</div>
+                <div class="tv-size">48" 4K Smart TV</div>
+                <div class="price-display">$599</div>
+                <div class="original-price-display">was $1,500</div>
+                <div class="rating-stars">⭐⭐⭐⭐⭐ Top Deal</div>
+            </div>
+            <div class="pin-content">
+                <h2 class="pin-title">LG B4 48" OLED - Lowest Price Ever! 🔥</h2>
+                <div class="price-info">
+                    <span class="current-price">$599</span>
+                    <span class="original-price">$1,500</span>
+                    <div class="savings-badge">Save $901 (60% OFF)</div>
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag oled">OLED</span>
+                    <span class="tech-tag">4K/120Hz</span>
+                    <span class="tech-tag">Gaming</span>
+                </div>
+                <div class="features-list">
+                    <div class="feature-item">Entry-level OLED technology</div>
+                    <div class="feature-item">Perfect for gaming (4K/120Hz)</div>
+                    <div class="feature-item">Ideal for bedrooms</div>
+                    <div class="feature-item">Incredible value at this price</div>
+                </div>
+                <a href="#" class="shop-button">🛒 GET THIS DEAL →</a>
+            </div>
+        </div>
+        
+        <!-- Technology Guide Pin -->
+        <div class="pin-card">
+            <a class="pin-button" onclick="pinThis(event, 'TV Technology Guide: OLED vs QLED vs Mini-LED - Which is best for you?')">📌 Save</a>
+            <div class="pin-image tech-guide">
+                <div class="tv-model">TV TECHNOLOGY GUIDE</div>
+                <div class="tv-size">Choose the Perfect Display</div>
+                <div class="tech-comparison-pin">
+                    <div class="tech-item">
+                        <div class="tech-name">🟣 OLED</div>
+                        <div class="tech-desc">Perfect blacks • Best for dark rooms</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">🔵 QLED</div>
+                        <div class="tech-desc">Very bright • Great for bright rooms</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">🟠 Mini-LED</div>
+                        <div class="tech-desc">Best balance • Great contrast</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pin-content">
+                <h2 class="pin-title">Which TV Technology Should You Choose? 📺</h2>
+                <p style="margin: 15px 0; color: #666;">Complete guide to OLED, QLED, and Mini-LED technologies. Find your perfect TV match!</p>
+                <div class="quick-stats">
+                    <div class="stat">
+                        <div class="stat-label">Best Picture</div>
+                        <div class="stat-value">OLED</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">Brightest</div>
+                        <div class="stat-value">Mini-LED</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">Best Value</div>
+                        <div class="stat-value">QLED</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">No Burn-in</div>
+                        <div class="stat-value">QLED/Mini-LED</div>
+                    </div>
+                </div>
+                <a href="#" class="shop-button" style="background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);">📖 READ FULL GUIDE →</a>
+            </div>
+        </div>
+        
+        <!-- Premium Mini-LED Deal -->
+        <div class="pin-card">
+            <a class="pin-button" onclick="pinThis(event, 'Hisense U8QG 65 inch Mini-LED TV $998 - 55% OFF!')">📌 Save</a>
+            <div class="pin-image miniled">
+                <div class="deal-badge">55% OFF</div>
+                <div class="tv-model">Hisense U8QG</div>
+                <div class="tv-size">65" Mini-LED 4K</div>
+                <div class="price-display">$998</div>
+                <div class="original-price-display">was $2,199</div>
+                <div class="rating-stars">⭐⭐⭐⭐⭐ Hot Deal</div>
+            </div>
+            <div class="pin-content">
+                <h2 class="pin-title">Hisense 65" U8QG Mini-LED - Stunning Value! ✨</h2>
+                <div class="price-info">
+                    <span class="current-price">$998</span>
+                    <span class="original-price">$2,199</span>
+                    <div class="savings-badge">Save $1,201 (55% OFF)</div>
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag miniled">Mini-LED</span>
+                    <span class="tech-tag">Quantum Dot</span>
+                    <span class="tech-tag">144Hz</span>
+                </div>
+                <div class="features-list">
+                    <div class="feature-item">2025 model with latest tech</div>
+                    <div class="feature-item">Dazzling brightness levels</div>
+                    <div class="feature-item">Excellent contrast ratio</div>
+                    <div class="feature-item">Hottest TV deal of the year</div>
+                </div>
+                <a href="#" class="shop-button">🛒 GRAB THIS DEAL →</a>
+            </div>
+        </div>
+        
+        <!-- LG C5 OLED Deal -->
+        <div class="pin-card">
+            <a class="pin-button" onclick="pinThis(event, 'LG C5 OLED 65 inch $1,697 - Premium OLED at 37% OFF!')">📌 Save</a>
+            <div class="pin-image oled">
+                <div class="deal-badge">37% OFF</div>
+                <div class="tv-model">LG C5 OLED</div>
+                <div class="tv-size">65" Premium OLED</div>
+                <div class="price-display">$1,697</div>
+                <div class="original-price-display">was $2,700</div>
+                <div class="rating-stars">⭐⭐⭐⭐⭐ Premium Pick</div>
+            </div>
+            <div class="pin-content">
+                <h2 class="pin-title">LG C5 65" OLED - Premium Cinema Experience 🎬</h2>
+                <div class="price-info">
+                    <span class="current-price">$1,697</span>
+                    <span class="original-price">$2,700</span>
+                    <div class="savings-badge">Save $1,003 (37% OFF)</div>
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag oled">OLED</span>
+                    <span class="tech-tag">AI Gen8</span>
+                    <span class="tech-tag">4K/120Hz</span>
+                </div>
+                <div class="features-list">
+                    <div class="feature-item">2025 model with AI processor Gen8</div>
+                    <div class="feature-item">Perfect for gaming (4K/120Hz)</div>
+                    <div class="feature-item">5-star rating from experts</div>
+                    <div class="feature-item">Best OLED for most people</div>
+                </div>
+                <a href="#" class="shop-button">🛒 SHOP NOW →</a>
+            </div>
+        </div>
+        
+        <!-- Budget Champion -->
+        <div class="pin-card">
+            <a class="pin-button" onclick="pinThis(event, 'Insignia 50 inch Fire TV only $170 - Best Budget TV Deal!')">📌 Save</a>
+            <div class="pin-image budget">
+                <div class="deal-badge">43% OFF</div>
+                <div class="tv-model">Insignia F50</div>
+                <div class="tv-size">50" 4K Fire TV</div>
+                <div class="price-display">$170</div>
+                <div class="original-price-display">was $300</div>
+                <div class="rating-stars">⭐⭐⭐⭐ Budget Pick</div>
+            </div>
+            <div class="pin-content">
+                <h2 class="pin-title">Insignia 50" Fire TV - Unbeatable Value! 💰</h2>
+                <div class="price-info">
+                    <span class="current-price">$170</span>
+                    <span class="original-price">$300</span>
+                    <div class="savings-badge">Save $130 (43% OFF)</div>
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag led">LED</span>
+                    <span class="tech-tag">4K UHD</span>
+                    <span class="tech-tag">Fire TV</span>
+                </div>
+                <div class="features-list">
+                    <div class="feature-item">4K Ultra HD resolution</div>
+                    <div class="feature-item">Built-in Fire TV & Alexa</div>
+                    <div class="feature-item">Voice remote included</div>
+                    <div class="feature-item">Best value under $200</div>
+                </div>
+                <a href="#" class="shop-button">🛒 GET THIS DEAL →</a>
+            </div>
+        </div>
+        
+        <!-- Samsung QD-OLED Flagship -->
+        <div class="pin-card">
+            <a class="pin-button" onclick="pinThis(event, 'Samsung S95D QD-OLED 77 inch $2,998 - Ultimate TV Technology!')">📌 Save</a>
+            <div class="pin-image premium">
+                <div class="deal-badge">30% OFF</div>
+                <div class="tv-model">Samsung S95D</div>
+                <div class="tv-size">77" QD-OLED</div>
+                <div class="price-display">$2,998</div>
+                <div class="original-price-display">was $4,300</div>
+                <div class="rating-stars">⭐⭐⭐⭐⭐ Flagship</div>
+            </div>
+            <div class="pin-content">
+                <h2 class="pin-title">Samsung 77" S95D QD-OLED - Ultimate Picture! 🏆</h2>
+                <div class="price-info">
+                    <span class="current-price">$2,998</span>
+                    <span class="original-price">$4,300</span>
+                    <div class="savings-badge">Save $1,302 (30% OFF)</div>
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag qd-oled">QD-OLED</span>
+                    <span class="tech-tag">77 inch</span>
+                    <span class="tech-tag">Premium</span>
+                </div>
+                <div class="features-list">
+                    <div class="feature-item">QD-OLED panel technology</div>
+                    <div class="feature-item">Ultra-bright vivid colors</div>
+                    <div class="feature-item">Premium 77" display</div>
+                    <div class="feature-item">Best picture quality available</div>
+                </div>
+                <a href="#" class="shop-button">🛒 BUY NOW →</a>
+            </div>
+        </div>
+        
+        <!-- TCL Giant Screen Deal -->
+        <div class="pin-card">
+            <a class="pin-button" onclick="pinThis(event, 'TCL 98 inch Mini-LED TV $1,800 - Massive Screen Deal!')">📌 Save</a>
+            <div class="pin-image miniled">
+                <div class="deal-badge">40% OFF</div>
+                <div class="tv-model">TCL QM6K</div>
+                <div class="tv-size">98" Giant Screen</div>
+                <div class="price-display">$1,800</div>
+                <div class="original-price-display">was $3,000</div>
+                <div class="rating-stars">⭐⭐⭐⭐⭐ Mega Deal</div>
+            </div>
+            <div class="pin-content">
+                <h2 class="pin-title">TCL 98" QM6K Mini-LED - Theater at Home! 🎭</h2>
+                <div class="price-info">
+                    <span class="current-price">$1,800</span>
+                    <span class="original-price">$3,000</span>
+                    <div class="savings-badge">Save $1,200 (40% OFF)</div>
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag miniled">QD Mini-LED</span>
+                    <span class="tech-tag">98 inch</span>
+                    <span class="tech-tag">144Hz</span>
+                </div>
+                <div class="features-list">
+                    <div class="feature-item">Massive 98" screen size</div>
+                    <div class="feature-item">Quantum dot colors</div>
+                    <div class="feature-item">144Hz gaming ready</div>
+                    <div class="feature-item">True theater experience</div>
+                </div>
+                <a href="#" class="shop-button">🛒 SEE DEAL →</a>
+            </div>
+        </div>
+        
+        <!-- Quick Deals Summary Pin -->
+        <div class="pin-card">
+            <a class="pin-button" onclick="pinThis(event, 'Prime Day TV Deals Summary - All Best Deals in One Place!')">📌 Save</a>
+            <div class="pin-image tech-guide" style="background: linear-gradient(135deg, rgba(155, 89, 182, 0.95) 0%, rgba(52, 152, 219, 0.95) 100%);">
+                <div class="tv-model">TOP PRIME DAY DEALS</div>
+                <div class="tv-size">Quick Reference Guide</div>
+                <div style="margin-top: 30px; font-size: 1.1rem; line-height: 2; text-align: left; max-width: 280px;">
+                    🥇 LG B4 48" OLED - $599<br>
+                    🥈 Hisense U8QG 65" - $998<br>
+                    🥉 Panasonic Z85 65" - $998<br>
+                    💰 Insignia F50 50" - $170<br>
+                    🎬 LG C5 65" OLED - $1,697<br>
+                    🏆 Samsung S95D 77" - $2,998<br>
+                    📺 TCL QM6K 98" - $1,800
+                </div>
+            </div>
+            <div class="pin-content">
+                <h2 class="pin-title">All Prime Day TV Deals at a Glance! 📋</h2>
+                <p style="margin: 15px 0; color: #666;">Complete list sorted by value. Pin this for quick reference while shopping!</p>
+                <a href="#" class="shop-button" style="background: linear-gradient(135deg, #8e44ad 0%, #3498db 100%);">🔍 VIEW ALL DEALS →</a>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Pinterest Float Button -->
+    <div class="pinterest-float" onclick="saveToPinterest()">📌</div>
+    
+    <script>
+        // Pinterest functionality
+        function pinThis(event, description) {
+            event.preventDefault();
+            const url = encodeURIComponent(window.location.href);
+            const desc = encodeURIComponent(description + ' Shop Prime Day TV deals now!');
+            window.open(`https://pinterest.com/pin/create/button/?url=${url}&description=${desc}`, '_blank');
+        }
+        
+        function saveToPinterest() {
+            const url = encodeURIComponent(window.location.href);
+            const description = encodeURIComponent('Prime Day TV Deals 2025 - Save up to 60% on LG OLED, Samsung QLED, Hisense Mini-LED! Complete buying guide included.');
+            window.open(`https://pinterest.com/pin/create/button/?url=${url}&description=${description}`, '_blank');
+        }
+        
+        // Track affiliate clicks
+        document.querySelectorAll('.shop-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Add your affiliate link logic here
+                const dealName = this.closest('.pin-card').querySelector('.pin-title').textContent;
+                console.log('Affiliate click:', dealName);
+                // Redirect to affiliate link
+                // window.location.href = 'your-affiliate-link-here';
+            });
+        });
+        
+        // Update timer
+        function updateTimer() {
+            const now = new Date();
+            const endTime = new Date(now.getTime() + 48 * 60 * 60 * 1000);
+            const diff = endTime - now;
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            document.querySelector('.deal-timer').textContent = `⏰ DEALS END IN ${hours} HOURS - UP TO 60% OFF!`;
+        }
+        
+        setInterval(updateTimer, 60000);
+        updateTimer();
+    </script>
+</body>
+</html>

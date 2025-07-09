@@ -5,8 +5,9 @@
     "main": "index.html",
     "scripts": {
       "dev": "python -m http.server 8000",
-      "build": "echo 'Static site - no build needed'",
-      "deploy": "echo 'Deploy to Cloudflare Pages'"
+      "build": "npm run build:prepare",
+      "build:prepare": "rm -rf dist && mkdir -p dist && cp index.html dist/",
+      "deploy": "echo 'Deploy to Cloudflare Pages via dashboard or wrangler'"
     },
     "keywords": [
       "prime-day",

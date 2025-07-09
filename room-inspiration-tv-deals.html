@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Living Rooms with Prime Day TVs | Shoppable Room Inspiration 2025</title>
+    <meta name="description" content="Gorgeous living room designs featuring Prime Day TV deals. Shop the entire look - TVs, furniture, decor. Create your dream space and save up to 60%!">
+    <meta name="keywords" content="living room ideas, TV room design, Prime Day furniture deals, modern living room, cozy room decor, shoppable rooms">
+    
+    <!-- Pinterest Rich Pins -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Dream Living Rooms with Prime Day TVs | Shop the Whole Look">
+    <meta property="og:description" content="Beautiful living room designs you can actually buy! Featuring Prime Day TV deals + matching furniture. Pin your dream room!">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1000&h=1500">
+    <meta name="pinterest-rich-pin" content="true">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #fafafa;
+            color: #333;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Room Grid */
+        .rooms-grid {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        /* Room Card */
+        .room-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        
+        .room-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* Pin Button */
+        .pin-room {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #E60023;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 10;
+            text-decoration: none;
+        }
+        
+        .room-card:hover .pin-room {
+            opacity: 1;
+        }
+        
+        /* Room Style Badge */
+        .room-style {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 13px;
+        }
+        
+        .room-style.modern { color: #3498db; }
+        .room-style.cozy { color: #e67e22; }
+        .room-style.minimal { color: #95a5a6; }
+        .room-style.luxury { color: #8e44ad; }
+        .room-style.industrial { color: #34495e; }
+        .room-style.boho { color: #e74c3c; }
+        
+        /* Room Image Placeholder */
+        .room-image {
+            width: 100%;
+            height: 450px;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* AI-Generated Room Styles */
+        .room-image.modern-minimal {
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%23f5f5f5" width="800" height="600"/><rect fill="%23333" x="50" y="400" width="700" height="10"/><rect fill="%23111" x="250" y="200" width="300" height="180" rx="5"/><text x="400" y="300" text-anchor="middle" font-family="Arial" font-size="24" fill="%23666">65" LG OLED</text><rect fill="%23ddd" x="100" y="380" width="150" height="100"/><rect fill="%23ddd" x="550" y="380" width="150" height="100"/><circle fill="%23999" cx="400" cy="100" r="40"/></svg>');
+        }
+        
+        .room-image.cozy-warm {
+            background: linear-gradient(rgba(139, 69, 19, 0.3), rgba(160, 82, 45, 0.4)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%23f4e4d1" width="800" height="600"/><rect fill="%238b4513" x="50" y="450" width="700" height="10"/><rect fill="%23222" x="200" y="150" width="400" height="250" rx="5"/><text x="400" y="280" text-anchor="middle" font-family="Arial" font-size="24" fill="%23666">77" Samsung OLED</text><rect fill="%23d2691e" x="80" y="400" width="200" height="120"/><rect fill="%23d2691e" x="520" y="400" width="200" height="120"/><path fill="%23ffd700" d="M350 50 L450 50 L430 100 L370 100 Z"/></svg>');
+        }
+        
+        .room-image.luxury-glam {
+            background: linear-gradient(rgba(75, 0, 130, 0.3), rgba(138, 43, 226, 0.3)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%232c2c2c" width="800" height="600"/><rect fill="%23gold" x="50" y="480" width="700" height="5"/><rect fill="%23000" x="150" y="100" width="500" height="300" rx="5"/><text x="400" y="250" text-anchor="middle" font-family="Arial" font-size="24" fill="%23888">85" Sony Premium</text><rect fill="%234b0082" x="50" y="400" width="250" height="150"/><rect fill="%234b0082" x="500" y="400" width="250" height="150"/><circle fill="%23ffd700" cx="400" cy="50" r="30"/></svg>');
+        }
+        
+        /* Shoppable Items Overlay */
+        .shoppable-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+        
+        .shop-dot {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            pointer-events: all;
+            transition: transform 0.2s ease;
+        }
+        
+        .shop-dot:hover {
+            transform: scale(1.2);
+        }
+        
+        .shop-dot.tv { 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .shop-dot.sofa { 
+            bottom: 80px; 
+            left: 30%; 
+        }
+        
+        .shop-dot.lamp { 
+            top: 60px; 
+            right: 100px; 
+        }
+        
+        .shop-dot.table { 
+            bottom: 100px; 
+            right: 30%; 
+        }
+        
+        /* Room Details */
+        .room-details {
+            padding: 25px;
+        }
+        
+        .room-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .room-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        /* Featured TV */
+        .featured-tv {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .tv-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .tv-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .tv-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e74c3c;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1rem;
+            margin-left: 8px;
+        }
+        
+        /* Shoppable Items List */
+        .shop-list {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        
+        .shop-list-title {
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .shop-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .item-number {
+            width: 30px;
+            height: 30px;
+            background: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            margin-right: 15px;
+        }
+        
+        .item-details {
+            flex: 1;
+        }
+        
+        .item-name {
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+        
+        .item-price {
+            color: #e74c3c;
+            font-weight: 600;
+        }
+        
+        /* CTA Buttons */
+        .shop-room-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .shop-room-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(231, 76, 60, 0.4);
+        }
+        
+        /* AI Prompt Helper */
+        .ai-helper {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 800px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+        }
+        
+        .ai-helper h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .prompt-template {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* Stats Section */
+        .room-stats {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .stat {
+            background: #f0f0f0;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        
+        .stat.saves {
+            background: #ffe4e6;
+            color: #e11d48;
+        }
+        
+        .stat.budget {
+            background: #dcfce7;
+            color: #16a34a;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .rooms-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .room-image {
+                height: 350px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <div class="hero">
+        <h1>🏠 Dream Living Rooms You Can Actually Buy</h1>
+        <p class="hero-subtitle">Stunning room designs featuring Prime Day TV deals + matching furniture. Shop the entire look and save!</p>
+    </div>
+    
+    <!-- Rooms Grid -->
+    <div class="rooms-grid">
+        
+        <!-- Modern Minimal Room -->
+        <div class="room-card">
+            <a href="#" class="pin-room" onclick="pinRoom(event, 'Modern Minimal Living Room with 65 inch LG OLED - Shop the whole look!')">📌 Save Room</a>
+            <span class="room-style modern">Modern Minimal</span>
+            <div class="room-image modern-minimal">
+                <div class="shoppable-overlay">
+                    <div class="shop-dot tv">TV</div>
+                    <div class="shop-dot sofa">1</div>
+                    <div class="shop-dot lamp">2</div>
+                    <div class="shop-dot table">3</div>
+                </div>
+            </div>
+            <div class="room-details">
+                <h2 class="room-title">Modern Minimal Paradise</h2>
+                <p class="room-description">Clean lines meet cutting-edge tech. This serene space centers around the stunning LG C5 OLED, perfect for movie nights in style.</p>
+                
+                <div class="featured-tv">
+                    <div class="tv-info">
+                        <span class="tv-name">📺 LG C5 65" OLED</span>
+                        <span class="tv-price">$1,697<span class="original-price">$2,700</span></span>
+                    </div>
+                    <div class="room-stats">
+                        <span class="stat saves">💕 2.3k saves</span>
+                        <span class="stat budget">Total Room: ~$3,500</span>
+                    </div>
+                </div>
+                
+                <div class="shop-list">
+                    <h3 class="shop-list-title">🛍️ Shop This Room:</h3>
+                    <div class="shop-item">
+                        <span class="item-number">1</span>
+                        <div class="item-details">
+                            <div class="item-name">Modern Gray Sectional Sofa</div>
+                            <div class="item-price">$899</div>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="item-number">2</span>
+                        <div class="item-details">
+                            <div class="item-name">Arc Floor Lamp - Black</div>
+                            <div class="item-price">$129</div>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="item-number">3</span>
+                        <div class="item-details">
+                            <div class="item-name">Glass Coffee Table</div>
+                            <div class="item-price">$349</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" class="shop-room-btn">🛒 SHOP THIS ROOM →</a>
+            </div>
+        </div>
+        
+        <!-- Cozy Cottage Room -->
+        <div class="room-card">
+            <a href="#" class="pin-room" onclick="pinRoom(event, 'Cozy Cottage Living Room with Samsung 77 inch OLED - Get the look!')">📌 Save Room</a>
+            <span class="room-style cozy">Cozy Cottage</span>
+            <div class="room-image cozy-warm">
+                <div class="shoppable-overlay">
+                    <div class="shop-dot tv">TV</div>
+                    <div class="shop-dot sofa">1</div>
+                    <div class="shop-dot lamp">2</div>
+                    <div class="shop-dot table">3</div>
+                </div>
+            </div>
+            <div class="room-details">
+                <h2 class="room-title">Cozy Cottage Retreat</h2>
+                <p class="room-description">Warm woods and plush textures create the perfect backdrop for the massive Samsung S95D. Ultimate comfort meets premium entertainment.</p>
+                
+                <div class="featured-tv">
+                    <div class="tv-info">
+                        <span class="tv-name">📺 Samsung S95D 77" QD-OLED</span>
+                        <span class="tv-price">$2,998<span class="original-price">$4,300</span></span>
+                    </div>
+                    <div class="room-stats">
+                        <span class="stat saves">💕 3.7k saves</span>
+                        <span class="stat budget">Total Room: ~$5,200</span>
+                    </div>
+                </div>
+                
+                <div class="shop-list">
+                    <h3 class="shop-list-title">🛍️ Shop This Room:</h3>
+                    <div class="shop-item">
+                        <span class="item-number">1</span>
+                        <div class="item-details">
+                            <div class="item-name">Chesterfield Leather Sofa</div>
+                            <div class="item-price">$1,299</div>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="item-number">2</span>
+                        <div class="item-details">
+                            <div class="item-name">Vintage Edison Bulb Lamp</div>
+                            <div class="item-price">$89</div>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="item-number">3</span>
+                        <div class="item-details">
+                            <div class="item-name">Reclaimed Wood Coffee Table</div>
+                            <div class="item-price">$549</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" class="shop-room-btn">🛒 SHOP THIS ROOM →</a>
+            </div>
+        </div>
+        
+        <!-- Budget-Friendly Modern -->
+        <div class="room-card">
+            <a href="#" class="pin-room" onclick="pinRoom(event, 'Budget Modern Living Room with Hisense 65 inch Mini-LED - Affordable style!')">📌 Save Room</a>
+            <span class="room-style modern">Budget Modern</span>
+            <div class="room-image modern-minimal" style="background-color: #e8f4f8;">
+                <div class="shoppable-overlay">
+                    <div class="shop-dot tv">TV</div>
+                    <div class="shop-dot sofa">1</div>
+                    <div class="shop-dot lamp">2</div>
+                    <div class="shop-dot table">3</div>
+                </div>
+            </div>
+            <div class="room-details">
+                <h2 class="room-title">Budget-Friendly Modern</h2>
+                <p class="room-description">Proof that style doesn't need to break the bank. The incredible Hisense U8QG Mini-LED anchors this affordable yet sophisticated space.</p>
+                
+                <div class="featured-tv">
+                    <div class="tv-info">
+                        <span class="tv-name">📺 Hisense U8QG 65" Mini-LED</span>
+                        <span class="tv-price">$998<span class="original-price">$2,199</span></span>
+                    </div>
+                    <div class="room-stats">
+                        <span class="stat saves">💕 5.1k saves</span>
+                        <span class="stat budget">Total Room: ~$1,800</span>
+                    </div>
+                </div>
+                
+                <div class="shop-list">
+                    <h3 class="shop-list-title">🛍️ Shop This Room:</h3>
+                    <div class="shop-item">
+                        <span class="item-number">1</span>
+                        <div class="item-details">
+                            <div class="item-name">IKEA Style Compact Sofa</div>
+                            <div class="item-price">$399</div>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="item-number">2</span>
+                        <div class="item-details">
+                            <div class="item-name">Minimalist Table Lamp</div>
+                            <div class="item-price">$45</div>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="item-number">3</span>
+                        <div class="item-details">
+                            <div class="item-name">White Oak Coffee Table</div>
+                            <div class="item-price">$179</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" class="shop-room-btn">🛒 SHOP THIS ROOM →</a>
+            </div>
+        </div>
+        
+        <!-- Luxury Glam Room -->
+        <div class="room-card">
+            <a href="#" class="pin-room" onclick="pinRoom(event, 'Luxury Glam Living Room with Sony 85 inch Premium TV - Ultimate luxury!')">📌 Save Room</a>
+            <span class="room-style luxury">Luxury Glam</span>
+            <div class="room-image luxury-glam">
+                <div class="shoppable-overlay">
+                    <div class="shop-dot tv">TV</div>
+                    <div class="shop-dot sofa">1</div>
+                    <div class="shop-dot lamp">2</div>
+                    <div class="shop-dot table">3</div>
+                </div>
+            </div>
+            <div class="room-details">
+                <h2 class="room-title">Luxury Glam Suite</h2>
+                <p class="room-description">Opulent textures and rich colors frame the impressive Sony Bravia. This is where high-end design meets cutting-edge entertainment.</p>
+                
+                <div class="featured-tv">
+                    <div class="tv-info">
+                        <span class="tv-name">📺 Sony Bravia 5 85" Mini-LED</span>
+                        <span class="tv-price">$2,298<span class="original-price">$2,800</span></span>
+                    </div>
+                    <div class="room-stats">
+                        <span class="stat saves">💕 1.8k saves</span>
+                        <span class="stat budget">Total Room: ~$6,500</span>
+                    </div>
+                </div>
+                
+                <div class="shop-list">
+                    <h3 class="shop-list-title">🛍️ Shop This Room:</h3>
+                    <div class="shop-item">
+                        <span class="item-number">1</span>
+                        <div class="item-details">
+                            <div class="item-name">Velvet Tufted Sofa - Emerald</div>
+                            <div class="item-price">$1,899</div>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="item-number">2</span>
+                        <div class="item-details">
+                            <div class="item-name">Crystal Chandelier Table Lamp</div>
+                            <div class="item-price">$299</div>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="item-number">3</span>
+                        <div class="item-details">
+                            <div class="item-name">Marble & Gold Coffee Table</div>
+                            <div class="item-price">$899</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" class="shop-room-btn">🛒 SHOP THIS ROOM →</a>
+            </div>
+        </div>
+        
+        <!-- Small Space Solution -->
+        <div class="room-card">
+            <a href="#" class="pin-room" onclick="pinRoom(event, 'Small Space Living Room with LG 48 inch OLED - Perfect for apartments!')">📌 Save Room</a>
+            <span class="room-style minimal">Small Space</span>
+            <div class="room-image modern-minimal" style="background-color: #f0f4f8;">
+                <div class="shoppable-overlay">
+                    <div class="shop-dot tv">TV</div>
+                    <div class="shop-dot sofa">1</div>
+                    <div class="shop-dot table">2</div>
+                </div>
+            </div>
+            <div class="room-details">
+                <h2 class="room-title">Small Space Perfection</h2>
+                <p class="room-description">Maximize your apartment with smart furniture choices and the perfect-sized LG B4 OLED. Big style in a compact package.</p>
+                
+                <div class="featured-tv">
+                    <div class="tv-info">
+                        <span class="tv-name">📺 LG B4 48" OLED</span>
+                        <span class="tv-price">$599<span class="original-price">$1,500</span></span>
+                    </div>
+                    <div class="room-stats">
+                        <span class="stat saves">💕 7.2k saves</span>
+                        <span class="stat budget">Total Room: ~$1,200</span>
+                    </div>
+                </div>
+                
+                <div class="shop-list">
+                    <h3 class="shop-list-title">🛍️ Shop This Room:</h3>
+                    <div class="shop-item">
+                        <span class="item-number">1</span>
+                        <div class="item-details">
+                            <div class="item-name">Convertible Futon Sofa</div>
+                            <div class="item-price">$299</div>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="item-number">2</span>
+                        <div class="item-details">
+                            <div class="item-name">Nesting Coffee Tables (Set)</div>
+                            <div class="item-price">$149</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" class="shop-room-btn">🛒 SHOP THIS ROOM →</a>
+            </div>
+        </div>
+        
+        <!-- Game Room Setup -->
+        <div class="room-card">
+            <a href="#" class="pin-room" onclick="pinRoom(event, 'Ultimate Game Room with TCL 98 inch Mini-LED - Massive gaming setup!')">📌 Save Room</a>
+            <span class="room-style industrial">Game Room</span>
+            <div class="room-image" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), #1a1a1a;">
+                <div class="shoppable-overlay">
+                    <div class="shop-dot tv">TV</div>
+                    <div class="shop-dot sofa">1</div>
+                    <div class="shop-dot lamp">2</div>
+                    <div class="shop-dot table">3</div>
+                </div>
+            </div>
+            <div class="room-details">
+                <h2 class="room-title">Ultimate Game Room</h2>
+                <p class="room-description">Go big or go home! The massive 98" TCL creates an immersive gaming paradise. Perfect for sports, movies, and epic gaming sessions.</p>
+                
+                <div class="featured-tv">
+                    <div class="tv-info">
+                        <span class="tv-name">📺 TCL QM6K 98" Mini-LED</span>
+                        <span class="tv-price">$1,800<span class="original-price">$3,000</span></span>
+                    </div>
+                    <div class="room-stats">
+                        <span class="stat saves">💕 4.5k saves</span>
+                        <span class="stat budget">Total Room: ~$3,200</span>
+                    </div>
+                </div>
+                
+                <div class="shop-list">
+                    <h3 class="shop-list-title">🛍️ Shop This Room:</h3>
+                    <div class="shop-item">
+                        <span class="item-number">1</span>
+                        <div class="item-details">
+                            <div class="item-name">Gaming Sectional w/ Cup Holders</div>
+                            <div class="item-price">$799</div>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="item-number">2</span>
+                        <div class="item-details">
+                            <div class="item-name">LED Strip Lights Kit</div>
+                            <div class="item-price">$49</div>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="item-number">3</span>
+                        <div class="item-details">
+                            <div class="item-name">Gaming Storage Unit</div>
+                            <div class="item-price">$229</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" class="shop-room-btn">🛒 SHOP THIS ROOM →</a>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- AI Helper Section -->
+    <div class="ai-helper">
+        <h2>🤖 Create Your Own Room Designs</h2>
+        <p style="margin-bottom: 20px; color: #666;">Use these prompts with AI image generators to create stunning room visualizations:</p>
+        
+        <div class="prompt-template">
+            <strong>Modern Minimal Room:</strong><br>
+            "Photorealistic modern living room, minimal design, white walls, large [TV SIZE] TV mounted on wall, gray sectional sofa, arc floor lamp, glass coffee table, natural lighting, professional interior photography, 8k quality"
+        </div>
+        
+        <div class="prompt-template">
+            <strong>Cozy Cottage Room:</strong><br>
+            "Warm cozy cottage living room, exposed wooden beams, [TV SIZE] TV above fireplace, leather Chesterfield sofa, vintage decor, soft warm lighting, autumn colors, professional interior design photo"
+        </div>
+        
+        <div class="prompt-template">
+            <strong>Luxury Glam Room:</strong><br>
+            "Luxurious living room, jewel tones, [TV SIZE] TV as centerpiece, velvet tufted furniture, gold accents, crystal chandelier, marble surfaces, dramatic lighting, high-end interior design"
+        </div>
+        
+        <p style="margin-top: 20px; font-size: 14px; color: #666;">
+            💡 <strong>Pro Tip:</strong> Replace [TV SIZE] with actual dimensions (e.g., "65-inch OLED TV" or "98-inch Mini-LED display") for accurate scale.
+        </p>
+    </div>
+    
+    <script>
+        // Pinterest functionality
+        function pinRoom(event, description) {
+            event.preventDefault();
+            const url = encodeURIComponent(window.location.href);
+            const desc = encodeURIComponent(description + ' Shop Prime Day deals!');
+            window.open(`https://pinterest.com/pin/create/button/?url=${url}&description=${desc}`, '_blank');
+        }
+        
+        // Shop dot interactions
+        document.querySelectorAll('.shop-dot').forEach(dot => {
+            dot.addEventListener('click', function() {
+                const roomCard = this.closest('.room-card');
+                const itemNumber = this.textContent;
+                
+                if (itemNumber === 'TV') {
+                    // Scroll to featured TV section
+                    roomCard.querySelector('.featured-tv').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    // Highlight corresponding item in list
+                    const items = roomCard.querySelectorAll('.shop-item');
+                    items[parseInt(itemNumber) - 1].style.background = '#fff3cd';
+                    setTimeout(() => {
+                        items[parseInt(itemNumber) - 1].style.background = '';
+                    }, 2000);
+                }
+            });
+        });
+        
+        // Track shop button clicks
+        document.querySelectorAll('.shop-room-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const roomName = this.closest('.room-card').querySelector('.room-title').textContent;
+                console.log('Shop room clicked:', roomName);
+                // Add affiliate tracking and redirect logic here
+            });
+        });
+    </script>
+</body>
+</html>
