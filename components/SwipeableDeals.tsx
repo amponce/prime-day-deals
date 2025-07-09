@@ -79,25 +79,35 @@ export default function SwipeableDeals({ deals }: SwipeableDealsProps) {
         </button>
       </div>
 
-      {/* Pagination Dots */}
-      <div className="flex justify-center space-x-2 mt-4">
-        {deals.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              index === currentIndex
-                ? 'bg-primary dark:bg-red-500 w-8'
-                : 'bg-gray-300 dark:bg-dark-border hover:bg-gray-400'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
+      {/* Bottom Section with proper spacing */}
+      <div className="mt-6 space-y-4">
+        {/* Pagination Dots */}
+        <div className="flex justify-center space-x-2">
+          {deals.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                index === currentIndex
+                  ? 'bg-primary dark:bg-red-500 w-8'
+                  : 'bg-gray-300 dark:bg-dark-border hover:bg-gray-400'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
 
-      {/* Counter */}
-      <div className="text-center mt-4 text-sm text-gray-600 dark:text-dark-text-secondary">
-        {currentIndex + 1} / {deals.length}
+        {/* Counter */}
+        <div className="text-center text-sm text-gray-600 dark:text-dark-text-secondary">
+          {currentIndex + 1} / {deals.length}
+        </div>
+        
+        {/* Swipe hint for mobile - with more spacing */}
+        <div className="flex items-center justify-center space-x-2 text-xs text-gray-500 dark:text-dark-text-secondary md:hidden">
+          <span className="animate-swipe-hint">←</span>
+          <span>Swipe for more</span>
+          <span className="animate-swipe-hint">→</span>
+        </div>
       </div>
     </div>
   );

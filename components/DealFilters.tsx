@@ -23,13 +23,13 @@ export default function DealFilters({
 
   return (
     <div className="bg-white dark:bg-dark-surface rounded-xl shadow-md dark:shadow-none dark:border dark:border-dark-border p-6">
-      <h3 className="text-xl font-bold mb-6">Filter Deals</h3>
+      <h3 className="text-xl font-bold mb-6 text-text-dark dark:text-white">Filter Deals</h3>
       
       {/* Price Range */}
       <div className="mb-6">
-        <h4 className="font-semibold mb-3">Price Range</h4>
+        <h4 className="font-semibold mb-3 text-text-dark dark:text-white">Price Range</h4>
         <div className="space-y-2">
-          <div className="flex justify-between text-sm">
+          <div className="flex justify-between text-sm text-text-gray dark:text-dark-text-secondary">
             <span>${priceRange[0]}</span>
             <span>${priceRange[1]}</span>
           </div>
@@ -46,10 +46,10 @@ export default function DealFilters({
       
       {/* Technology */}
       <div className="mb-6">
-        <h4 className="font-semibold mb-3">Technology</h4>
+        <h4 className="font-semibold mb-3 text-text-dark dark:text-white">Technology</h4>
         <div className="space-y-2">
           {technologies.map((tech) => (
-            <label key={tech} className="flex items-center">
+            <label key={tech} className="flex items-center text-text-dark dark:text-white cursor-pointer">
               <input
                 type="checkbox"
                 checked={selectedTech.includes(tech)}
@@ -70,7 +70,7 @@ export default function DealFilters({
       
       {/* Screen Size */}
       <div className="mb-6">
-        <h4 className="font-semibold mb-3">Screen Size</h4>
+        <h4 className="font-semibold mb-3 text-text-dark dark:text-white">Screen Size</h4>
         <div className="grid grid-cols-3 gap-2">
           {sizes.map((size) => (
             <button

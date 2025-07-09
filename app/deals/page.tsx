@@ -8,11 +8,11 @@ export const metadata = {
 
 export default function DealsPage() {
   return (
-    <div className="py-8">
+    <div className="py-8 bg-white dark:bg-dark-bg min-h-screen">
       <div className="container-custom">
         <div className="mb-8 text-center md:text-left">
-          <h1 className="text-4xl font-bold mb-4">All TV Deals</h1>
-          <p className="text-xl text-gray-600 dark:text-dark-text-secondary">
+          <h1 className="text-4xl font-bold mb-4 text-text-dark dark:text-white">All TV Deals</h1>
+          <p className="text-xl text-text-gray dark:text-dark-text-secondary">
             Find your perfect TV from our curated selection
           </p>
         </div>

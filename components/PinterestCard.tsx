@@ -1,7 +1,7 @@
 'use client';
 
 interface PinterestCardProps {
-  type: 'deal' | 'room' | 'guide';
+  type: 'deal' | 'room' | 'guide' | 'featured';
   title: string;
   subtitle: string;
   price?: number;
@@ -37,7 +37,7 @@ export default function PinterestCard({
 
   return (
     <div className="break-inside-avoid group">
-      <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <div className="relative bg-white dark:bg-dark-surface rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-border-light dark:border-dark-border">
         {/* Pin Button */}
         <button
           onClick={handlePin}
@@ -47,41 +47,49 @@ export default function PinterestCard({
         </button>
         
         {/* Image Area */}
-        <div className={`relative bg-gradient-to-br ${getImageBackground()} text-white p-8 ${
-          type === 'guide' ? 'h-96' : type === 'room' ? 'h-80' : 'h-72'
+        <div className={`relative overflow-hidden ${
+          type === 'guide' ? 'h-96' : type === 'featured' ? 'h-80' : 'h-64'
         }`}>
-          {price && originalPrice && (
-            <div className="absolute top-4 right-4 bg-white text-red-600 px-4 py-2 rounded-full font-bold">
-              {Math.round((1 - price / originalPrice) * 100)}% OFF
-            </div>
+          {/* Display actual image if URL provided */}
+          {image.startsWith('http') ? (
+            <img 
+              src={image} 
+              alt={title}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className={`h-full bg-gradient-to-br ${getImageBackground()}`} />
           )}
           
-          <div className="h-full flex flex-col items-center justify-center text-center">
-            <div className="text-3xl font-bold mb-2">{title}</div>
-            <div className="text-lg opacity-90 mb-4">{subtitle}</div>
-            
-            {price && (
-              <div>
-                <div className="text-4xl font-bold">${price}</div>
-                {originalPrice && (
-                  <div className="text-lg line-through opacity-70">${originalPrice}</div>
-                )}
+          {/* Overlay content */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+            {price && originalPrice && (
+              <div className="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-md font-bold shadow-lg">
+                {Math.round((1 - price / originalPrice) * 100)}% OFF
               </div>
             )}
             
-            {type === 'guide' && (
-              <div className="mt-4 bg-white/20 backdrop-blur-sm rounded-lg p-4">
-                <p className="text-sm">Expert comparison & buying tips</p>
-              </div>
-            )}
+            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3 className="text-2xl font-bold mb-2 line-clamp-2">{title}</h3>
+              <p className="text-lg opacity-90 mb-3 line-clamp-1">{subtitle}</p>
+              
+              {price && (
+                <div className="flex items-baseline gap-3">
+                  <span className="text-3xl font-bold">${price}</span>
+                  {originalPrice && (
+                    <span className="text-lg line-through opacity-70">${originalPrice}</span>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
         </div>
         
         {/* Content Area */}
-        <div className="p-4">
-          {type === 'deal' && (
+        <div className="p-4 bg-white dark:bg-dark-surface">
+          {(type === 'deal' || type === 'featured') && (
             <div className="flex justify-between items-center">
-              <span className="text-sm font-semibold text-gray-600">Prime Day Deal</span>
+              <span className="text-sm font-semibold text-text-gray dark:text-dark-text-secondary">Prime Day Deal</span>
               <button className="text-primary font-semibold hover:underline">
                 Shop Now →
               </button>
@@ -90,7 +98,7 @@ export default function PinterestCard({
           
           {type === 'room' && (
             <div className="flex justify-between items-center">
-              <span className="text-sm font-semibold text-gray-600">Shoppable Room</span>
+              <span className="text-sm font-semibold text-text-gray dark:text-dark-text-secondary">Shoppable Room</span>
               <button className="text-primary font-semibold hover:underline">
                 View Room →
               </button>

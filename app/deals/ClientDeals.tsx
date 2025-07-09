@@ -87,13 +87,13 @@ export default function ClientDeals({ initialDeals }: ClientDealsProps) {
       {/* Deals Grid/Swipeable */}
       <div className="lg:col-span-3">
         <div className="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-          <p className="text-gray-600 dark:text-dark-text-secondary">
+          <p className="text-text-gray dark:text-dark-text-secondary">
             Showing {filteredDeals.length} of {deals.length} deals
           </p>
           <select 
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="border dark:border-dark-border dark:bg-dark-surface rounded-lg px-4 py-2 text-sm sm:text-base"
+            className="border border-border-light dark:border-dark-border bg-white dark:bg-dark-surface rounded-lg px-4 py-2 text-sm sm:text-base text-text-dark dark:text-white"
           >
             <option value="best">Sort by: Best Deals</option>
             <option value="price-low">Price: Low to High</option>
@@ -126,7 +126,7 @@ export default function ClientDeals({ initialDeals }: ClientDealsProps) {
               <SwipeableDeals deals={filteredDeals} />
             ) : (
               /* Desktop: Grid Layout */
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {filteredDeals.map((tv) => (
                   <TVDealCard key={tv.id} tv={tv} />
                 ))}

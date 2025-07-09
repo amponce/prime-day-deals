@@ -28,28 +28,28 @@
   }
   
   .btn-primary {
-    @apply bg-primary hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 hover:shadow-lg;
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-md transition-all duration-200 transform hover:-translate-y-0.5 hover:shadow-lg;
   }
   
   .btn-secondary {
-    @apply bg-secondary hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 hover:shadow-lg;
+    @apply bg-secondary hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-md transition-all duration-200 transform hover:-translate-y-0.5 hover:shadow-lg;
   }
   
   .card {
-    @apply bg-white dark:bg-dark-surface rounded-2xl shadow-lg hover:shadow-xl dark:shadow-none dark:border dark:border-dark-border transition-all duration-300;
+    @apply bg-white dark:bg-dark-surface rounded-xl shadow-card hover:shadow-card-hover dark:shadow-none dark:border dark:border-dark-border transition-all duration-300;
   }
   
   .pin-card {
-    @apply bg-white dark:bg-dark-surface rounded-2xl shadow-lg hover:shadow-2xl dark:shadow-none dark:border dark:border-dark-border transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden;
-    @apply border border-gray-100 dark:border-dark-border;
+    @apply bg-white dark:bg-dark-surface rounded-xl shadow-card hover:shadow-card-hover dark:shadow-none dark:border dark:border-dark-border transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden;
+    @apply border border-border-light dark:border-dark-border;
   }
   
   .pin-card:hover {
-    @apply dark:border-dark-border/50;
+    @apply border-primary/20 dark:border-dark-border/50;
   }
   
   .tech-badge {
-    @apply inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide;
+    @apply inline-block px-3 py-1 rounded-md text-xs font-semibold uppercase tracking-wide;
   }
   
   /* Smooth animations */
@@ -59,7 +59,16 @@
   
   /* Better focus states */
   .pin-card:focus-within {
-    @apply ring-2 ring-primary dark:ring-red-500 ring-offset-2 dark:ring-offset-dark-bg;
+    @apply ring-2 ring-primary dark:ring-primary ring-offset-2 dark:ring-offset-dark-bg;
+  }
+  
+  /* Deal badge styles */
+  .deal-badge {
+    @apply absolute top-4 left-4 bg-primary text-white px-3 py-1.5 rounded-md text-sm font-semibold shadow-md z-10;
+  }
+  
+  .savings-badge {
+    @apply bg-success text-white px-2 py-1 rounded-md text-xs font-semibold;
   }
   
   /* Dark mode scrollbar */

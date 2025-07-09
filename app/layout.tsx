@@ -4,17 +4,16 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { DarkModeProvider } from '@/components/DarkModeContext'
-import DarkModeToggle from '@/components/DarkModeToggle'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Best TV Deals & Room Inspiration | Shop Smart Home Setups',
-  description: 'Find the best TV deals on OLED, QLED, and Mini-LED TVs. Create your dream living room with shoppable room designs. Prime Day deals and beyond!',
-  keywords: 'TV deals, OLED TV, QLED TV, living room ideas, room design, Prime Day deals, home decor',
+  title: 'PrimeDealHub - Prime Day TV Deals 2025 | Verified Deals & Expert Reviews',
+  description: 'Save up to 70% on premium TVs during Prime Day. Hand-picked OLED, QLED, and Mini-LED deals verified by experts. Updated hourly with real-time pricing.',
+  keywords: 'Prime Day TV deals, OLED TV deals, QLED TV sales, Mini-LED TVs, TV buying guide, Amazon Prime Day 2025',
   openGraph: {
-    title: 'Best TV Deals & Dream Room Designs',
-    description: 'Shop curated TV deals and complete room setups. Save up to 60% on top brands.',
+    title: 'PrimeDealHub - Save Up to 70% on Premium TVs',
+    description: 'Hand-picked Prime Day TV deals verified by experts. Real-time pricing on OLED, QLED, and Mini-LED TVs.',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=1200&h=630',
@@ -37,7 +36,6 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} bg-white dark:bg-dark-bg text-gray-900 dark:text-dark-text transition-colors duration-300`}>
         <DarkModeProvider>
-          <DarkModeToggle />
           <Header />
           <main className="min-h-screen">
             {children}

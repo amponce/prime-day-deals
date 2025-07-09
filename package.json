@@ -14,14 +14,13 @@
         "fetch-deals": "tsx scripts/fetch-deals.ts",
         "fetch-deals:fresh": "tsx scripts/fetch-deals.ts --fresh",
         "fetch-deals:free": "tsx scripts/fetch-deals-free.ts",
-        "update-deals": "tsx scripts/manual-update.ts",
+        "update-deals": "tsx scripts/update-deals-from-results.ts",
         "quick-deals": "tsx scripts/quick-deals.ts",
         "scraper": "tsx scripts/simple-scraper.ts",
         "free-options": "tsx scripts/free-automation.ts",
         "scrape-amazon": "tsx scripts/scrape-amazon-deals.ts",
         "download-images": "tsx scripts/download-tv-images.ts",
         "process-json": "tsx scripts/process-amazon-json.ts",
-        "update-deals": "tsx scripts/update-deals-from-results.ts",
         "quick-update": "tsx scripts/quick-update.ts"
     },
     "keywords": [
@@ -45,6 +44,7 @@
         "url": "https://github.com/amponce/prime-day-deals/issues"
     },
     "dependencies": {
+        "@heroicons/react": "^2.2.0",
         "@tailwindcss/postcss": "^4.1.11",
         "@types/node": "^24.0.12",
         "@types/react": "^19.1.8",

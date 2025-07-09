@@ -132,12 +132,6 @@ export default function SwipeableCard({
     >
       {children}
       
-      {/* Swipe hint for mobile */}
-      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-2 text-xs text-gray-500 dark:text-dark-text-secondary md:hidden">
-        <span className="animate-swipe-hint">←</span>
-        <span>Swipe for more</span>
-        <span className="animate-swipe-hint">→</span>
-      </div>
     </div>
   );
 }

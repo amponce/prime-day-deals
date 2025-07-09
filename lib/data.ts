@@ -274,7 +274,483 @@ export const tvDeals: TV[] = [
     highlights: ['Previously viewed', 'Save 37%', 'Quantum Colors'],
     affiliateUrl: `https://www.amazon.com/dp/B0DYS29P6M?tag=${AFFILIATE_TAG}`,
     imageUrl: 'https://m.media-amazon.com/images/I/81BbB+ji0uL._AC_UY218_.jpg',
-  }
+  },
+  {
+    id: 'B0DYVR565M',
+    name: 'Hisense 65" Class QD7 Series Mini-LED 4K UHD Smart Fire TV (65QD7QF, 2025 Model) - QLED, HDR10+, Dol',
+    brand: 'Hisense',
+    model: 'B0DYVR565M',
+    size: 65,
+    technology: 'QLED',
+    currentPrice: 469,
+    originalPrice: 599.99,
+    discount: 22,
+    rating: 4.4,
+    reviewCount: 125,
+    features: ['4K UHD', 'Smart TV', 'HDR', 'Dolby Vision/Atmos'],
+    dealRating: 'good',
+    highlights: ['Save $130.99'],
+    affiliateUrl: `https://www.amazon.com/dp/B0DYVR565M?tag=${AFFILIATE_TAG}`,
+    imageUrl: 'https://m.media-amazon.com/images/I/815AVndLSpL._AC_UY218_.jpg',
+  },
+  {
+    id: "B0F433J5DZ",
+    name: "65-Inch Class QLED 4K Smart TV, Ultra-Slim Mural TV, 144Hz, HDR, Art Mode w/AI Art, Wide Color Gamut",
+    brand: "Unknown",
+    model: "B0F433J5DZ",
+    size: 65,
+    technology: "QLED",
+    currentPrice: 759,
+    originalPrice: 999.99,
+    discount: 24,
+    rating: 4.4,
+    reviewCount: 35,
+    features: [
+      "4K UHD",
+      "Smart TV",
+      "HDR",
+      "Dolby Vision/Atmos"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $240.99"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0F433J5DZ?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/81N+sCcdgkL._AC_UY218_.jpg"
+  },
+  {
+    id: "B0CPQ6WDYH",
+    name: "Toshiba 75\" Class C350 Series LED 4K UHD Smart Fire TV with Alexa Voice Remote (75C350LU, 2024 Model",
+    brand: "Toshiba",
+    model: "B0CPQ6WDYH",
+    size: 75,
+    technology: "LED",
+    currentPrice: 429,
+    originalPrice: 649.99,
+    discount: 34,
+    rating: 4.4,
+    reviewCount: 4,
+    features: [
+      "4K UHD",
+      "Smart TV"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $220.99"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0CPQ6WDYH?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/61NqjgmpyEL._AC_UY218_.jpg"
+  },
+  {
+    id: "B0DYW81FWH",
+    name: "Hisense 65\" Class U6 Series Mini-LED 4K UHD Smart Fire TV (65U65QF, 2025 Model) - QLED, Native 144Hz",
+    brand: "Hisense",
+    model: "B0DYW81FWH",
+    size: 65,
+    technology: "QLED",
+    currentPrice: 599,
+    originalPrice: 999.99,
+    discount: 40,
+    rating: 4.4,
+    reviewCount: 87,
+    features: [
+      "4K UHD",
+      "Smart TV",
+      "HDR",
+      "Dolby Vision/Atmos"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $400.99"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0DYW81FWH?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/81XMT3aZtnL._AC_UY218_.jpg"
+  },
+  {
+    id: "B0F1DRNWP7",
+    name: "Hisense 55\" Class U8 Mini-LED ULED 4K UHD Google Smart TV (55U8QG, 2025 Model) - QLED, Native 165Hz,",
+    brand: "Hisense",
+    model: "B0F1DRNWP7",
+    size: 55,
+    technology: "QLED",
+    currentPrice: 878,
+    originalPrice: 1499.99,
+    discount: 41,
+    rating: 4.5,
+    reviewCount: 43,
+    features: [
+      "4K UHD",
+      "Smart TV",
+      "HDR",
+      "Dolby Vision/Atmos"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $621.99"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0F1DRNWP7?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/81DjhNwmYvL._AC_UY218_.jpg"
+  },
+  {
+    id: "B0DXMT6CJP",
+    name: "Samsung 65-Inch Class QLED Q7F Series Samsung Vision AI Smart TV (2025 Model, 65Q7F) Quantum HDR, Ob",
+    brand: "Samsung",
+    model: "B0DXMT6CJP",
+    size: 65,
+    technology: "QLED",
+    currentPrice: 547,
+    originalPrice: 627.99,
+    discount: 13,
+    rating: 4.2,
+    reviewCount: 197,
+    features: [
+      "4K UHD",
+      "Smart TV",
+      "HDR"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $80.99"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0DXMT6CJP?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/81LOXgmvLeL._AC_UY218_.jpg"
+  },
+  {
+    id: "B0DZ8R71DB",
+    name: "TOSHIBA 50\" Class C350 Series LED 4K UHD Smart Fire TV with Voice Remote with Alexa (50C350NU)",
+    brand: "Toshiba",
+    model: "B0DZ8R71DB",
+    size: 50,
+    technology: "LED",
+    currentPrice: 199,
+    originalPrice: 349.99,
+    discount: 43,
+    rating: 4.2,
+    reviewCount: 165,
+    features: [
+      "4K UHD",
+      "Smart TV"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $150.99"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0DZ8R71DB?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/81GTMnklZQL._AC_UY218_.jpg"
+  },
+  {
+    id: "B0CY4TQ91Q",
+    name: "Hisense 55-Inch Class U8 Series Mini-LED ULED 4K UHD Google Smart TV (55U8N) - QLED, Dolby Vision IQ",
+    brand: "Hisense",
+    model: "B0CY4TQ91Q",
+    size: 55,
+    technology: "QLED",
+    currentPrice: 648,
+    originalPrice: 698,
+    discount: 7,
+    rating: 4.2,
+    reviewCount: 801,
+    features: [
+      "4K UHD",
+      "Smart TV",
+      "Dolby Vision/Atmos"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $50.00"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0CY4TQ91Q?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/91lwPEBtZJL._AC_UY218_.jpg"
+  },
+  {
+    id: "B0CMDJ8TK3",
+    name: "INSIGNIA 43\" Class F30 Series LED 4K UHD Smart Fire TV, Voice Remote with Alexa, Stream Live TV With",
+    brand: "Insignia",
+    model: "B0CMDJ8TK3",
+    size: 43,
+    technology: "LED",
+    currentPrice: 149,
+    originalPrice: 199.99,
+    discount: 25,
+    rating: 4.5,
+    reviewCount: 2,
+    features: [
+      "4K UHD",
+      "Smart TV"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $50.99"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0CMDJ8TK3?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/81Q0HLbeLbL._AC_UY218_.jpg"
+  },
+  {
+    id: "B0DSRSTJ54",
+    name: "TCL 65-Inch Class QM6K Series QD-Mini LED 4K UHD Google Smart TV Best Value Mini-LED TV - QLED, 144h",
+    brand: "Tcl",
+    model: "B0DSRSTJ54",
+    size: 65,
+    technology: "QLED",
+    currentPrice: 547,
+    originalPrice: 698,
+    discount: 22,
+    rating: 4.4,
+    reviewCount: 144,
+    features: [
+      "4K UHD",
+      "Smart TV",
+      "Dolby Vision/Atmos"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $151.00"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0DSRSTJ54?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/71VBjJ-uQXL._AC_UY218_.jpg"
+  },
+  {
+    id: "B0DYWG3BL1",
+    name: "Hisense 55\" Class U6 Series Mini-LED 4K UHD Smart Fire TV (55U65QF, 2025 Model) - QLED, Native 144Hz",
+    brand: "Hisense",
+    model: "B0DYWG3BL1",
+    size: 55,
+    technology: "QLED",
+    currentPrice: 447,
+    originalPrice: 799.99,
+    discount: 44,
+    rating: 4.4,
+    reviewCount: 87,
+    features: [
+      "4K UHD",
+      "Smart TV",
+      "HDR",
+      "Dolby Vision/Atmos"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $352.99"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0DYWG3BL1?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/81Jss7GPQcL._AC_UY218_.jpg"
+  },
+  {
+    id: "B0F35W3T1C",
+    name: "Hisense 85-Inch Class QLED 4K S7N CanvasTV Series Dolby Vision HDR Google Smart TV (85S7N, 2025 Mode",
+    brand: "Hisense",
+    model: "B0F35W3T1C",
+    size: 85,
+    technology: "QLED",
+    currentPrice: 1997,
+    originalPrice: 3999.99,
+    discount: 50,
+    rating: 4.6,
+    reviewCount: 306,
+    features: [
+      "4K UHD",
+      "Smart TV",
+      "HDR",
+      "Dolby Vision/Atmos"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $2002.99"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0F35W3T1C?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/812uGMjcZ+L._AC_UY218_.jpg"
+  },
+  {
+    id: "B0CHJ7GQ2Q",
+    name: "Hisense 75” Class U6 Series ULED 4K UHD Smart Fire TV (75U6HF, 2024) - QLED, Full Array Local Dimmin",
+    brand: "Hisense",
+    model: "B0CHJ7GQ2Q",
+    size: 55,
+    technology: "QLED",
+    currentPrice: 493,
+    originalPrice: 529.99,
+    discount: 7,
+    rating: 4.2,
+    reviewCount: 4,
+    features: [
+      "4K UHD",
+      "Smart TV",
+      "HDR",
+      "Dolby Vision/Atmos"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $36.99"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0CHJ7GQ2Q?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/71oAhtaqY1L._AC_UY218_.jpg"
+  },
+  {
+    id: "B0D4NYW7QS",
+    name: "TCL 65-Inch Class S5 UHD 4K LED Smart TV with Fire TV (65S551F, 2024 Model), Dolby Vision, HDR PRO+,",
+    brand: "Tcl",
+    model: "B0D4NYW7QS",
+    size: 65,
+    technology: "LED",
+    currentPrice: 339,
+    originalPrice: 449.99,
+    discount: 25,
+    rating: 4.1,
+    reviewCount: 2,
+    features: [
+      "4K UHD",
+      "Smart TV",
+      "HDR",
+      "Dolby Vision/Atmos"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $110.99"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0D4NYW7QS?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/7195La7MKSL._AC_UY218_.jpg"
+  },
+  {
+    id: "B0DVWXXRDL",
+    name: "TCL 55-Inch Class QM7K Series QD-Mini LED 4K UHD Google Smart TV Best Premium Mini-LED TV - QLED, 14",
+    brand: "Tcl",
+    model: "B0DVWXXRDL",
+    size: 55,
+    technology: "QLED",
+    currentPrice: 598,
+    originalPrice: 1199.99,
+    discount: 50,
+    rating: 4,
+    reviewCount: 34,
+    features: [
+      "4K UHD",
+      "Smart TV"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $601.99"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0DVWXXRDL?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/812yrdwifxL._AC_UY218_.jpg"
+  },
+  {
+    id: "B0DXMT6YD4",
+    name: "Samsung 50-Inch Class Crystal UHD U8000F 4K Smart TV (2025 Model) Endless Free Content, Crystal Proc",
+    brand: "Samsung",
+    model: "B0DXMT6YD4",
+    size: 50,
+    technology: "LED",
+    currentPrice: 327,
+    originalPrice: 0,
+    discount: 0,
+    rating: 4.1,
+    reviewCount: 240,
+    features: [
+      "4K UHD",
+      "Smart TV"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $72.99"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0DXMT6YD4?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/8170FdFwkML._AC_UY218_.jpg"
+  },
+  {
+    id: "B0CY3C6Q7K",
+    name: "Samsung 85-Inch Class QLED 4K Q80D Series Quantum HDR+ Smart TV w/Dolby Atmos, Object Tracking Sound",
+    brand: "Samsung",
+    model: "B0CY3C6Q7K",
+    size: 85,
+    technology: "QLED",
+    currentPrice: 1297,
+    originalPrice: 2797.99,
+    discount: 54,
+    rating: 4.3,
+    reviewCount: 302,
+    features: [
+      "4K UHD",
+      "Smart TV",
+      "HDR",
+      "Dolby Vision/Atmos"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $1500.99"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0CY3C6Q7K?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/61-irP7v82L._AC_UY218_.jpg"
+  },
+  {
+    id: "B0BVMYQXGZ",
+    name: "SAMSUNG 43-Inch Class Crystal UHD 4K CU8000 Series PurColor, Object Tracking Sound Lite, Q-Symphony,",
+    brand: "Samsung",
+    model: "B0BVMYQXGZ",
+    size: 43,
+    technology: "LED",
+    currentPrice: 387,
+    originalPrice: 0,
+    discount: 0,
+    rating: 4.4,
+    reviewCount: 1,
+    features: [
+      "4K UHD",
+      "Smart TV"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $72.99"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0BVMYQXGZ?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/71bdeNqyARL._AC_UY218_.jpg"
+  },
+  {
+    id: "B0CXG3HMX1",
+    name: "VIZIO 40-inch Full HD 1080p Smart TV with DTS Virtual: X, Alexa Compatibility, Google Cast Built-in,",
+    brand: "Vizio",
+    model: "B0CXG3HMX1",
+    size: 40,
+    technology: "LED",
+    currentPrice: 138,
+    originalPrice: 169.99,
+    discount: 19,
+    rating: 4.1,
+    reviewCount: 4,
+    features: [
+      "Smart TV"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $31.99"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0CXG3HMX1?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/81NLMdXhvrL._AC_UY218_.jpg"
+  },
+  {
+    id: "B0D1JH53Y7",
+    name: "TCL 65-Inch Q68 QLED Pro 4K UHD Smart TV with Google TV (65Q681G, 2024 Model) Dolby Vision, Dolby At",
+    brand: "Tcl",
+    model: "B0D1JH53Y7",
+    size: 65,
+    technology: "QLED",
+    currentPrice: 459,
+    originalPrice: 0,
+    discount: 0,
+    rating: 4.3,
+    reviewCount: 166,
+    features: [
+      "4K UHD",
+      "Smart TV",
+      "HDR",
+      "120Hz",
+      "Dolby Vision/Atmos"
+    ],
+    dealRating: "good",
+    highlights: [
+      "Save $72.99"
+    ],
+    affiliateUrl: `https://www.amazon.com/dp/B0D1JH53Y7?tag=${AFFILIATE_TAG}`,
+    imageUrl: "https://m.media-amazon.com/images/I/81QEewnDH-L._AC_UY218_.jpg"
+  }  
 ];
 
 export const technologies: Technology[] = [
@@ -435,4 +911,5 @@ export const roomDesigns: Room[] = [
     ],
     saves: 34300,
   },
+  
 ];

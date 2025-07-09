@@ -35,24 +35,31 @@ export default function TVDealCard({ tv, onSwipeLeft, onSwipeRight, enableSwipe 
   };
 
   const cardContent = (
-    <div className="pin-card group h-full relative overflow-hidden" onMouseEnter={() => setIsPinHovered(true)} onMouseLeave={() => setIsPinHovered(false)}>
+    <div className="bg-white dark:bg-dark-surface rounded-xl shadow-card hover:shadow-card-hover border border-border-light dark:border-dark-border transition-all duration-300 group h-full relative overflow-hidden flex flex-col" onMouseEnter={() => setIsPinHovered(true)} onMouseLeave={() => setIsPinHovered(false)}>
       {/* Pin Button */}
       <button
         onClick={handlePin}
-        className={`absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-semibold text-sm z-10 transition-all duration-300 hover:scale-105 hover:bg-red-700 ${
+        className={`absolute top-4 right-4 bg-white dark:bg-dark-surface-2 text-primary dark:text-primary px-3 py-1.5 rounded-md font-semibold text-sm z-20 transition-all duration-300 hover:scale-105 shadow-md ${
           isPinHovered ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
         }`}
       >
         📌 Save
       </button>
       
-      {/* Deal Badge */}
-      <div className="absolute top-4 right-4 bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg z-10">
-        {tv.discount}% OFF
-      </div>
+      {/* Deal Badge - Only show if there's a real discount */}
+      {tv.discount > 0 && (
+        <div className="deal-badge">
+          {tv.discount}% OFF
+        </div>
+      )}
       
-      {/* TV Image */}
-      <div className="relative h-64 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-dark-surface-2 dark:to-dark-surface">
+      {/* TV Image - Clickable */}
+      <a 
+        href={tv.affiliateUrl || '#'}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block relative h-56 bg-bg-light dark:bg-dark-surface-2 cursor-pointer"
+      >
         {tv.imageUrl ? (
           <img 
             src={tv.imageUrl} 
@@ -65,50 +72,46 @@ export default function TVDealCard({ tv, onSwipeLeft, onSwipeRight, enableSwipe 
         
         {/* Best Seller Badge */}
         {tv.reviewCount && tv.reviewCount > 500 && (
-          <div className="absolute bottom-2 left-2 bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-bold">
+          <div className="absolute bottom-2 left-2 bg-accent text-white px-3 py-1 rounded-md text-xs font-bold">
             ⭐ Best Seller
           </div>
         )}
-      </div>
+      </a>
       
       {/* Content */}
-      <div className="p-6">
-        <div className="flex items-start justify-between mb-4">
-          <h3 className="text-xl font-bold">{tv.name}</h3>
-          <span className={`tech-badge text-white ${getTechColor(tv.technology)}`}>
+      <div className="p-5 flex-1 flex flex-col">
+        <div className="mb-3">
+          <span className={`tech-badge text-white ${getTechColor(tv.technology)} mb-2 inline-block`}>
             {tv.technology}
           </span>
+          <h3 className="text-lg font-semibold text-text-dark dark:text-white line-clamp-2 min-h-[3.5rem]">{tv.name}</h3>
         </div>
         
         {/* Price */}
         <div className="mb-4">
-          <div className="text-3xl font-bold text-primary dark:text-red-500">
-            ${tv.currentPrice.toFixed(2)}
+          <div className="flex items-baseline gap-3 mb-1">
+            <span className="text-3xl font-bold text-primary">
+              ${tv.currentPrice.toFixed(2)}
+            </span>
+            {tv.originalPrice > 0 && (
+              <span className="text-lg text-text-gray line-through">
+                ${tv.originalPrice.toFixed(2)}
+              </span>
+            )}
           </div>
-          <div className="text-gray-500 dark:text-dark-text-secondary line-through">
-            ${tv.originalPrice.toFixed(2)}
-          </div>
-          <div className="text-green-600 dark:text-green-500 font-semibold">
-            Save ${(tv.originalPrice - tv.currentPrice).toFixed(2)}
-          </div>
+          {tv.originalPrice > 0 && tv.discount > 0 && (
+            <div className="savings-badge inline-block">
+              Save ${(tv.originalPrice - tv.currentPrice).toFixed(2)}
+            </div>
+          )}
         </div>
         
-        {/* Features */}
-        <div className="mb-4">
-          <div className="flex flex-wrap gap-2">
-            {tv.features.slice(0, 3).map((feature, index) => (
-              <span key={index} className="text-xs bg-gray-100 dark:bg-dark-surface-2 px-2 py-1 rounded">
-                {feature}
-              </span>
-            ))}
-          </div>
-        </div>
         
         {/* Highlights */}
-        <ul className="text-sm text-gray-600 dark:text-dark-text-secondary mb-6 space-y-1">
-          {tv.highlights.slice(0, 3).map((highlight, index) => (
+        <ul className="text-sm text-text-gray dark:text-dark-text-secondary mb-4 space-y-1 flex-1">
+          {tv.highlights.slice(0, 4).map((highlight, index) => (
             <li key={index} className="flex items-start">
-              <span className="text-green-500 dark:text-green-400 mr-2">✓</span>
+              <span className="text-success mr-2 font-bold">✓</span>
               {highlight}
             </li>
           ))}
@@ -122,18 +125,18 @@ export default function TVDealCard({ tv, onSwipeLeft, onSwipeRight, enableSwipe 
                 <span key={i} className={i < Math.floor(tv.rating) ? '' : 'opacity-30'}>★</span>
               ))}
             </div>
-            <span className="text-sm text-gray-600 dark:text-dark-text-secondary">
-              {tv.rating} {tv.reviewCount ? `(${tv.reviewCount.toLocaleString()})` : ''}
+            <span className="text-sm text-text-gray dark:text-dark-text-secondary">
+              {tv.rating} {tv.reviewCount ? `(${tv.reviewCount.toLocaleString()} reviews)` : ''}
             </span>
           </div>
         )}
         
-        {/* CTA Button */}
+        {/* CTA Button - Always at bottom */}
         <a 
           href={tv.affiliateUrl || '#'}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg block text-center"
+          className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-md transition-all duration-200 block text-center mt-auto"
         >
           View Deal on Amazon →
         </a>

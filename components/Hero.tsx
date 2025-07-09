@@ -20,43 +20,35 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="bg-gradient-to-br from-primary to-red-700 dark:from-red-800 dark:to-red-950 text-white py-12 md:py-20">
-      <div className="container-custom text-center">
-        <div className="inline-block bg-black/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
-          <span className="font-semibold">⏰ DEALS END IN: {timeLeft}</span>
+    <section className="relative bg-gradient-to-br from-secondary to-gray-800 text-white py-16 md:py-20 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1717295248380-9b10f252dbcb?q=80&w=3628&auto=format&fit=crop" 
+          alt="Modern living room with TV"
+          className="w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/80 to-gray-800/90" />
+      </div>
+      <div className="container-custom text-center relative z-10">
+        <div className="inline-flex items-center bg-primary px-6 py-3 rounded-md mb-8">
+          <span className="text-sm font-bold uppercase tracking-wider">🔥 PRIME DAY DEALS LIVE NOW - LIMITED TIME</span>
         </div>
         
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          Epic TV Deals for Prime Day
+        <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          Massive TV Deals
         </h1>
         
-        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
-          Save up to 60% on premium OLED, QLED, and Mini-LED TVs from top brands.
+        <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">
+          Live price tracking • Updated every 5 minutes
         </p>
         
         <div className="flex flex-wrap gap-4 justify-center">
-          <Link href="/deals" className="btn-primary bg-white dark:bg-dark-surface text-primary dark:text-red-500 hover:bg-gray-100 dark:hover:bg-dark-surface-2">
-            Browse TV Deals →
-          </Link>
-          <Link href="/guide" className="btn-secondary bg-transparent border-2 border-white hover:bg-white dark:hover:bg-dark-surface hover:text-primary dark:hover:text-white">
-            TV Buying Guide →
+          <Link href="/deals" className="bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-8 rounded-md text-lg transition-all duration-200 transform hover:-translate-y-0.5 hover:shadow-lg">
+            View All Deals →
           </Link>
         </div>
         
-        <div className="mt-12 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-          <div>
-            <div className="text-3xl font-bold">12+</div>
-            <div className="opacity-80">TV Deals</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold">5</div>
-            <div className="opacity-80">Technologies</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold">60%</div>
-            <div className="opacity-80">Max Savings</div>
-          </div>
-        </div>
       </div>
     </section>
   );
