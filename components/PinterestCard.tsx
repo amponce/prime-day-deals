@@ -44,10 +44,10 @@ export default function PinterestCard({
   // Guide placeholder images with better styling
   const getGuideContent = () => {
     const guideStyles: Record<string, { bg: string; icon: string; color: string }> = {
-      'small-space': { bg: 'bg-blue-50', icon: '📐', color: 'text-blue-900' },
-      'cable-management': { bg: 'bg-green-50', icon: '🔌', color: 'text-green-900' },
-      'lighting-guide': { bg: 'bg-amber-50', icon: '💡', color: 'text-amber-900' },
-      'guide': { bg: 'bg-purple-50', icon: '📚', color: 'text-purple-900' },
+      'small-space': { bg: 'bg-blue-50 dark:bg-blue-900/20', icon: '📐', color: 'text-blue-900 dark:text-blue-100' },
+      'cable-management': { bg: 'bg-green-50 dark:bg-green-900/20', icon: '🔌', color: 'text-green-900 dark:text-green-100' },
+      'lighting-guide': { bg: 'bg-amber-50 dark:bg-amber-900/20', icon: '💡', color: 'text-amber-900 dark:text-amber-100' },
+      'guide': { bg: 'bg-purple-50 dark:bg-purple-900/20', icon: '📚', color: 'text-purple-900 dark:text-purple-100' },
     };
     const style = guideStyles[image] || guideStyles.guide;
     
@@ -116,13 +116,13 @@ export default function PinterestCard({
           
           {/* Subtle action hint */}
           {type === 'room' && (
-            <p className="text-xs text-gray-500 dark:text-gray-500 mt-2 font-medium">
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 font-medium">
               Get the look →
             </p>
           )}
           
           {type === 'guide' && (
-            <p className="text-xs text-gray-500 dark:text-gray-500 mt-2 font-medium">
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 font-medium">
               Read guide →
             </p>
           )}
@@ -133,7 +133,7 @@ export default function PinterestCard({
                 ${price.toLocaleString()}
               </span>
               {originalPrice && originalPrice > price && (
-                <span className="text-sm text-gray-500 line-through">
+                <span className="text-sm text-gray-500 dark:text-gray-400 line-through">
                   ${originalPrice.toLocaleString()}
                 </span>
               )}

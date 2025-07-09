@@ -27,17 +27,17 @@ export default function TrustBadges() {
   ];
 
   return (
-    <section className="bg-bg-light dark:bg-dark-surface py-8 border-b border-border-light dark:border-dark-border">
+    <section className="bg-gray-50 dark:bg-gray-800 py-8 border-b border-gray-200 dark:border-gray-700">
       <div className="container-custom">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {badges.map((badge, index) => (
             <div key={index} className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-white dark:bg-dark-surface-2 rounded-full flex items-center justify-center text-primary dark:text-primary shadow-sm">
+              <div className="w-10 h-10 bg-white dark:bg-gray-700 rounded-full flex items-center justify-center text-primary dark:text-primary shadow-sm">
                 {badge.icon}
               </div>
               <div>
                 <h3 className="font-semibold text-text-dark dark:text-white">{badge.title}</h3>
-                <p className="text-sm text-text-gray dark:text-dark-text-secondary">{badge.description}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{badge.description}</p>
               </div>
             </div>
           ))}

@@ -26,7 +26,7 @@ const blogPosts = [
 
 export default function BlogPreview() {
   return (
-    <section className="py-16 bg-gray-50 dark:bg-dark-surface">
+    <section className="py-16 bg-gray-50 dark:bg-gray-900">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
@@ -40,7 +40,7 @@ export default function BlogPreview() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {blogPosts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`}>
-              <div className="bg-white dark:bg-dark-bg rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 p-6 h-full cursor-pointer group">
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 p-6 h-full cursor-pointer group">
                 <div className={`w-16 h-16 rounded-lg bg-gradient-to-br ${post.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                   <span className="text-2xl">{post.icon}</span>
                 </div>

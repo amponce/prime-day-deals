@@ -35,7 +35,7 @@ const blogPosts: BlogPostPreview[] = [
     slug: 'tv-room-lighting-guide',
     title: 'Perfect TV Room Lighting Setup',
     subtitle: 'Create the ultimate viewing experience with proper ambient and bias lighting',
-    heroImage: 'https://images.unsplash.com/photo-1565195992957-6188c9f58ba2?q=80&w=2000',
+    heroImage: 'https://images.unsplash.com/photo-1636206508343-a6c955887476?q=80&w=2000',
     publishDate: 'July 9, 2025',
     readTime: '6 min',
     category: 'Lighting Guide'
@@ -121,7 +121,7 @@ export default function BlogPage() {
 
         {/* Pinterest-style CTA */}
         <div className="mt-16 text-center">
-          <div className="bg-white dark:bg-dark-surface rounded-2xl shadow-card p-8 md:p-12 max-w-3xl mx-auto">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-card p-8 md:p-12 max-w-3xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900 dark:text-white">
               Save These Guides for Later
             </h2>

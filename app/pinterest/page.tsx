@@ -128,7 +128,7 @@ export default function PinterestPage() {
   });
 
   return (
-    <div className="py-8 bg-gray-50 dark:bg-dark-bg min-h-screen">
+    <div className="py-8 bg-gray-50 dark:bg-gray-900 min-h-screen">
       <div className="container-custom">
         {/* Subtle header - Pinterest style */}
         <div className="text-center mb-8">

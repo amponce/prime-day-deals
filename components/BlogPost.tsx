@@ -72,7 +72,7 @@ export default function BlogPost({
       {/* Content */}
       <div className="container mx-auto max-w-7xl px-4 py-6 sm:py-8 md:py-12">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white dark:bg-dark-surface rounded-xl shadow-lg p-4 sm:p-6 md:p-8 lg:p-12 blog-content">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 sm:p-6 md:p-8 lg:p-12 blog-content">
             {content}
           </div>
 
@@ -97,6 +97,7 @@ export default function BlogPost({
         .blog-content {
           font-size: 1rem;
           line-height: 1.75;
+          @apply text-gray-700 dark:text-gray-300;
         }
         
         @media (min-width: 768px) {
@@ -156,12 +157,12 @@ export default function BlogPost({
         
         /* Tip Boxes */
         .blog-content .tip-box {
-          @apply bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 sm:p-5 md:p-6 mb-4 sm:mb-6 rounded-r-lg;
+          @apply bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 p-4 sm:p-5 md:p-6 mb-4 sm:mb-6 rounded-r-lg;
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
         
         .blog-content .tip-box p {
-          @apply mb-0 text-blue-900 dark:text-blue-100;
+          @apply mb-0 text-blue-900 dark:text-blue-200;
           font-size: 0.95em;
         }
         
@@ -173,12 +174,12 @@ export default function BlogPost({
         
         /* Warning Boxes */
         .blog-content .warning-box {
-          @apply bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 sm:p-5 md:p-6 mb-4 sm:mb-6 rounded-r-lg;
+          @apply bg-amber-50 dark:bg-amber-950/30 border-l-4 border-amber-500 p-4 sm:p-5 md:p-6 mb-4 sm:mb-6 rounded-r-lg;
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
         
         .blog-content .warning-box p {
-          @apply mb-0 text-amber-900 dark:text-amber-100;
+          @apply mb-0 text-amber-900 dark:text-amber-200;
           font-size: 0.95em;
         }
         
@@ -190,7 +191,7 @@ export default function BlogPost({
         
         /* Quick Summary */
         .blog-content .quick-summary {
-          @apply bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800/50 dark:to-gray-700/50 p-4 sm:p-5 md:p-6 rounded-lg mb-6 sm:mb-8 border border-gray-200 dark:border-gray-600;
+          @apply bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 p-4 sm:p-5 md:p-6 rounded-lg mb-6 sm:mb-8 border border-gray-200 dark:border-gray-600;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
         

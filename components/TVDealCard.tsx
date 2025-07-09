@@ -94,7 +94,7 @@ export default function TVDealCard({ tv, onSwipeLeft, onSwipeRight, enableSwipe 
               ${tv.currentPrice.toFixed(2)}
             </span>
             {tv.originalPrice > 0 && (
-              <span className="text-lg text-text-gray line-through">
+              <span className="text-lg text-gray-500 dark:text-gray-400 line-through">
                 ${tv.originalPrice.toFixed(2)}
               </span>
             )}
@@ -108,7 +108,7 @@ export default function TVDealCard({ tv, onSwipeLeft, onSwipeRight, enableSwipe 
         
         
         {/* Highlights */}
-        <ul className="text-sm text-text-gray dark:text-dark-text-secondary mb-4 space-y-1 flex-1">
+        <ul className="text-sm text-gray-600 dark:text-gray-400 mb-4 space-y-1 flex-1">
           {tv.highlights.slice(0, 4).map((highlight, index) => (
             <li key={index} className="flex items-start">
               <span className="text-success mr-2 font-bold">✓</span>
@@ -125,7 +125,7 @@ export default function TVDealCard({ tv, onSwipeLeft, onSwipeRight, enableSwipe 
                 <span key={i} className={i < Math.floor(tv.rating) ? '' : 'opacity-30'}>★</span>
               ))}
             </div>
-            <span className="text-sm text-text-gray dark:text-dark-text-secondary">
+            <span className="text-sm text-gray-600 dark:text-gray-400">
               {tv.rating} {tv.reviewCount ? `(${tv.reviewCount.toLocaleString()} reviews)` : ''}
             </span>
           </div>

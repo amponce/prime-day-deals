@@ -85,7 +85,7 @@ export default function DealFilters({
               className={`py-1 px-2 text-sm rounded border transition-colors ${
                 selectedSizes.includes(size)
                   ? 'bg-primary text-white border-primary'
-                  : 'bg-white dark:bg-dark-surface-2 text-gray-700 dark:text-dark-text border-gray-300 dark:border-dark-border hover:border-primary dark:hover:border-red-500'
+                  : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 hover:border-primary dark:hover:border-red-500'
               }`}
             >
               {size}"
